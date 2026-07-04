@@ -1,0 +1,19 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# Diagnostics and scratch scripts
+scratch/
+
+# Bucket A - Raw downloaded/fetched files (exclude from git, fetch instructions in README)
+results.csv
+goalscorers.csv
+shootouts.csv
+former_names.csv
+SquadLists-English.pdf
+players_master.csv
+player_gameweek_history.csv

@@ -1,0 +1,673 @@
+team,position,player_name,club,caps,goals
+Algeria,GK,MASTIL Melvin,FC Stade Nyonnais (SUI),2,0
+Algeria,DF,MANDI Aissa,Lille OSC (FRA),122,8
+Algeria,DF,ABADA Achref,USM Alger (ALG),10,1
+Algeria,DF,TOUGAI Mohamed Amine,Espérance De Tunisie (TUN),30,2
+Algeria,DF,BELAID Zineddine,JS Kabylie (ALG),20,1
+Algeria,MF,ZERROUKI Ramiz,FC Twente (NED),55,3
+Algeria,FW,MAHREZ Riyad,Al Ahli FC (KSA),119,40
+Algeria,MF,AOUAR Houssem,Al Ittihad (KSA),25,6
+Algeria,FW,GOUIRI Amine,Olympique Marseille (FRA),26,11
+Algeria,MF,CHAIBI Fares,Eintracht Frankfurt (GER),34,3
+Algeria,FW,HADJ MOUSSA Anis,Feyenoord Rotterdam (NED),17,2
+Algeria,FW,BENBOUALI Nadhir,Györi ETO FC (HUN),5,2
+Algeria,DF,HADJAM Jaouen,BSC Young Boys (SUI),20,3
+Algeria,MF,BOUDAOUI Hicham,OGC Nice (FRA),36,0
+Algeria,GK,BENBOT Oussama,USM Alger (ALG),4,0
+Algeria,DF,BELGHALI Ra«k,Hellas Verona FC (ITA),16,2
+Algeria,FW,AMOURA Mohamed,VfL Wolfsburg (GER),48,19
+Algeria,MF,BENTALEB Nabil,Lille OSC (FRA),63,6
+Algeria,FW,BOULBINA Adil,Al Duhail SC (QAT),12,5
+Algeria,DF,BENSEBAINI Ramy,Borussia Dortmund (GER),85,9
+Algeria,MF,MAZA Ibrahim,Bayer 04 Leverkusen (GER),20,2
+Algeria,GK,ZIDANE Luca,Granada CF (ESP),9,0
+Algeria,MF,TITRAOUI Yassine,Sporting Charleroi (BEL),5,0
+Algeria,FW,GHEDJEMIS Fares,Frosinone (ITA),2,1
+Algeria,DF,CHERGUI Samir,Paris FC (FRA),6,0
+Argentina,GK,MUSSO Juan,Atlético De Madrid (ESP),4,0
+Argentina,DF,TAGLIAFICO Nicolas,Olympique Lyonnais (FRA),78,1
+Argentina,DF,MONTIEL Gonzalo,CA River Plate (ARG),40,2
+Argentina,MF,PAREDES Leandro,CA Boca Juniors (ARG),79,5
+Argentina,MF,DE PAUL Rodrigo,Inter Miami CF (USA),89,2
+Argentina,MF,BARCO Valentin,RC Strasbourg (FRA),5,2
+Argentina,FW,ALVAREZ Julian,Atlético De Madrid (ESP),54,14
+Argentina,FW,MESSI Lionel,Inter Miami CF (USA),202,123
+Argentina,MF,LO CELSO Giovani,Real Betis (ESP),68,5
+Argentina,GK,RULLI Geronimo,Olympique Marseille (FRA),8,0
+Argentina,MF,PALACIOS Exequiel,Bayer 04 Leverkusen (GER),41,0
+Argentina,MF,GONZALEZ Nico,Atlético De Madrid (ESP),53,6
+Argentina,FW,ALMADA Thiago,Atlético De Madrid (ESP),19,5
+Argentina,FW,SIMEONE Giuliano,Atlético De Madrid (ESP),14,2
+Argentina,FW,PAZ Nico,Como (ITA),11,1
+Argentina,DF,OTAMENDI Nicolas,SL Ben«ca (POR),135,8
+Argentina,FW,LOPEZ Jose Manuel,SE Palmeiras (BRA),6,0
+Argentina,FW,MARTINEZ Lautaro,FC Internazionale Milano (ITA),80,38
+Argentina,DF,MEDINA Facundo,Olympique Marseille (FRA),11,0
+Argentina,DF,MOLINA Nahuel,Atlético De Madrid (ESP),60,1
+Australia,GK,RYAN Mathew,Levante UD (ESP),104,0
+Australia,DF,DEGENEK Milos,APOEL FC (CYP),57,1
+Australia,DF,CIRCATI Alessandro,Parma (ITA),16,1
+Australia,DF,ITALIANO Jacob,Grazer AK (AUT),7,0
+Australia,DF,BOS Jordan,Feyenoord Rotterdam (NED),30,4
+Australia,DF,GERIA Jason,Albirex Niigata (JPN),16,0
+Australia,FW,LECKIE Mathew,Melbourne City FC (AUS),82,14
+Australia,MF,METCALFE Connor,FC St. Pauli (GER),39,2
+Australia,FW,TOURE Mohamed,Norwich City FC (ENG),12,2
+Australia,FW,HRUSTIC Ajdin,SC Heracles Almelo (NED),38,3
+Australia,FW,MABIL Awer,CD Castellón (ESP),38,10
+Australia,GK,IZZO Paul,Randers FC (DEN),4,0
+Australia,MF,ONEILL Aiden,New York City FC (USA),34,0
+Australia,MF,DEVLIN Cameron,Heart Of Midlothian FC (SCO),5,0
+Australia,DF,TREWIN Kai,New York City FC (USA),6,0
+Australia,DF,BEHICH Aziz,Melbourne City FC (AUS),86,3
+Australia,FW,IRANKUNDA Nestory,Watford FC (ENG),18,6
+Australia,GK,BEACH Patrick,Melbourne City FC (AUS),5,0
+Australia,DF,SOUTTAR Harry,Leicester City FC (ENG),41,11
+Australia,FW,VOLPATO Cristian,US Sassuolo (ITA),3,0
+Australia,DF,BURGESS Cameron,Swansea City AFC (WAL),29,0
+Australia,MF,IRVINE Jackson,FC St. Pauli (GER),85,14
+Australia,FW,VELUPILLAY Nishan,Melbourne Victory FC (AUS),9,3
+Australia,MF,OKON-ENGSTLER Paul,Sydney FC (AUS),9,0
+Australia,DF,HERRINGTON Lucas,Colorado Rapids (USA),5,0
+Australia,FW,YENGI Tete,FC Machida Zelvia (JPN),3,1
+Austria,GK,SCHLAGER Alexander,FC Red Bull Salzburg (AUT),29,0
+Austria,DF,AFFENGRUBER David,Elche CF (ESP),1,0
+Austria,MF,SCHLAGER Xaver,RB Leipzig (GER),54,4
+Austria,DF,POSCH Stefan,1. FSV Mainz 05 (GER),55,5
+Austria,MF,SEIWALD Nicolas,RB Leipzig (GER),50,1
+Austria,FW,ARNAUTOVIC Marko,FK Crvena Zvezda (SRB),136,49
+Austria,DF,ALABA David,Real Madrid C. F. (ESP),116,15
+Austria,MF,SABITZER Marcel,Borussia Dortmund (GER),101,27
+Austria,MF,GRILLITSCH Florian,SC Braga (POR),60,1
+Austria,FW,GREGORITSCH Michael,FC Augsburg (GER),77,24
+Austria,GK,WIEGELE Florian,FC Viktoria Plzeň (CZE),1,0
+Austria,GK,PENTZ Patrick,Brøndby IF (DEN),18,0
+Austria,DF,LIENHART Philipp,SC Freiburg (GER),43,3
+Austria,DF,MWENE Phillip,1. FSV Mainz 05 (GER),32,0
+Austria,MF,CHUKWUEMEKA Carney,Borussia Dortmund (GER),5,1
+Austria,MF,SCHMID Romano,SV Werder Bremen (GER),37,4
+Austria,MF,LJUBICIC Dejan,FC Schalke 04 (GER),9,1
+Austria,MF,LAIMER Konrad,FC Bayern München (GER),60,7
+Austria,FW,WIMMER Patrick,VfL Wolfsburg (GER),32,1
+Austria,MF,PRASS Alexander,TSG Hoffenheim (GER),20,0
+Austria,DF,FRIEDL Marco,SV Werder Bremen (GER),12,0
+Austria,MF,WANNER Paul,PSV Eindhoven (NED),6,0
+Austria,DF,SVOBODA Michael,Venezia FC (ITA),4,0
+Austria,MF,SCHOEPF Alessandro,Wolfsberger AC (AUT),35,6
+Belgium,GK,COURTOIS Thibaut,Real Madrid C. F. (ESP),112,0
+Belgium,DF,DEBAST Zeno,Sporting CP (POR),26,1
+Belgium,DF,THEATE Arthur,Eintracht Frankfurt (GER),35,1
+Belgium,DF,MECHELE Brandon,Club Brugge (BEL),12,1
+Belgium,MF,WITSEL Axel,Girona FC (ESP),138,12
+Belgium,MF,DE BRUYNE Kevin,SSC Napoli (ITA),122,38
+Belgium,FW,LUKAKU Romelu,SSC Napoli (ITA),129,91
+Belgium,FW,LUKEBAKIO Dodi,SL Ben«ca (POR),31,6
+Belgium,DF,MEUNIER Thomas,Lille OSC (FRA),82,10
+Belgium,DF,DE WINTER Koni,AC Milan (ITA),8,0
+Belgium,FW,DE KETELAERE Charles,Atalanta Bergamo (ITA),32,6
+Belgium,DF,SEYS Joaquin,Club Brugge (BEL),5,0
+Belgium,MF,MOREIRA Diego,RC Strasbourg (FRA),3,0
+Belgium,MF,VANAKEN Hans,Club Brugge (BEL),37,7
+Belgium,MF,SAELEMAEKERS Alexis,AC Milan (ITA),26,3
+Belgium,MF,RASKIN Nicolas,Rangers FC (SCO),16,2
+Belgium,DF,NGOY Nathan,Lille OSC (FRA),6,0
+Belgium,FW,FERNANDEZ-PARDO Matias,Lille OSC (FRA),5,0
+Brazil,MF,EDERSON SILVA,Atalanta Bergamo (ITA),4,0
+Brazil,DF,MARQUINHOS,Paris Saint-Germain (FRA),109,7
+Brazil,DF,ALEX SANDRO,CR Flamengo (BRA),46,2
+Brazil,FW,VINICIUS JUNIOR,Real Madrid C. F. (ESP),53,13
+Brazil,FW,NEYMAR JR,Santos FC (BRA),129,79
+Brazil,FW,RAPHINHA,FC Barcelona (ESP),41,11
+Brazil,GK,WEVERTON,Grêmio FBPA (BRA),11,0
+Brazil,DF,DANILO,CR Flamengo (BRA),74,1
+Brazil,DF,BREMER,Juventus FC (ITA),8,1
+Brazil,DF,LEO PEREIRA,CR Flamengo (BRA),4,0
+Brazil,DF,DOUGLAS SANTOS,FC Zenit St. Petersburg (RUS),11,0
+Brazil,MF,FABINHO,Al Ittihad (KSA),36,0
+Brazil,MF,DANILO SANTOS,Botafogo (BRA),7,2
+Brazil,FW,ENDRICK,Olympique Lyonnais (FRA),20,4
+Brazil,FW,LUIZ HENRIQUE,FC Zenit St. Petersburg (RUS),16,2
+Brazil,DF,ROGER IBANEZ,Al Ahli FC (KSA),8,0
+Canada,GK,ST. CLAIR Dayne,Inter Miami CF (USA),20,0
+Canada,DF,JOHNSTON Alistair,Celtic FC (SCO),62,1
+Canada,DF,JONES Al«e,Middlesbrough FC (ENG),2,0
+Canada,DF,DE FOUGEROLLES Luc,FCV Dender EH (BEL),17,0
+Canada,DF,WATERMAN Joel,Chicago Fire FC (USA),17,0
+Canada,MF,CHOINIERE Mathieu,LAFC (USA),25,0
+Canada,MF,EUSTAQUIO Stephen,LAFC (USA),60,5
+Canada,MF,KONE Ismael,US Sassuolo (ITA),42,4
+Canada,FW,LARIN Cyle,Southampton FC (ENG),93,32
+Canada,FW,DAVID Jonathan,Juventus FC (ITA),81,42
+Canada,MF,MILLAR Liam,Hull City FC (ENG),44,1
+Canada,FW,OLUWASEYI Tani,Villarreal CF (ESP),28,2
+Canada,DF,CORNELIUS Derek,Rangers FC (SCO),48,1
+Canada,MF,SHAFFELBURG Jacob,LAFC (USA),35,6
+Canada,DF,BOMBITO Moise,OGC Nice (FRA),22,0
+Canada,GK,CREPEAU Maxime,Orlando City SC (USA),36,0
+Canada,FW,BUCHANAN Tajon,Villarreal CF (ESP),64,8
+Canada,GK,GOODMAN Owen,Barnsley (ENG),0,0
+Canada,DF,DAVIES Alphonso,FC Bayern München (GER),59,15
+Canada,FW,AHMED Ali,Norwich City FC (ENG),27,1
+Canada,MF,OSORIO Jonathan,Toronto FC (CAN),92,10
+Canada,DF,LARYEA Richie,Toronto FC (CAN),80,1
+Canada,DF,SIGUR Niko,HNK Hajduk Split (CRO),21,2
+Canada,FW,DAVID Promise,Royale Union Saint-Gilloise (BEL),13,4
+Canada,MF,SALIBA Nathan,RSC Anderlecht (BEL),18,3
+Canada,FW,NELSON Jayden,Austin FC (USA),15,3
+Colombia,GK,OSPINA David,Atlético Nacional (COL),130,0
+Colombia,DF,LUCUMI Jhon,Bologna FC (ITA),40,1
+Colombia,DF,ARIAS Santiago,CA Independiente (ARG),69,0
+Colombia,MF,CASTANO Kevin,CA River Plate (ARG),27,0
+Colombia,MF,RIOS Richard,SL Ben«ca (POR),35,2
+Colombia,MF,CARRASCAL Jorge,CR Flamengo (BRA),25,2
+Colombia,FW,CORDOBA Jhon,FC Krasnodar (RUS),23,6
+Colombia,MF,RODRIGUEZ James,Minnesota United FC (USA),129,31
+Colombia,GK,VARGAS Camilo,Atlas FC (MEX),45,0
+Colombia,DF,MINA Yerry,Cagliari (ITA),54,8
+Colombia,DF,PUERTA Gustavo,Racing Santander (ESP),9,1
+Colombia,MF,PORTILLA Juan,Athletico Paranaense (BRA),10,0
+Colombia,DF,MOJICA Johan,RCD Mallorca (ESP),47,1
+Colombia,DF,DITTA Willer,CF Cruz Azul (MEX),5,0
+Colombia,FW,HERNANDEZ Cucho,Real Betis (ESP),10,2
+Colombia,MF,QUINTERO Juan,CA River Plate (ARG),51,6
+Colombia,FW,CAMPAZ Jaminton,CA Rosario Central (ARG),11,2
+Colombia,DF,MACHADO Deiver,FC Nantes (FRA),16,0
+Colombia,DF,SANCHEZ Davinson,Galatasaray SK (TUR),82,4
+Colombia,GK,MONTERO Alvaro,CA Vélez Sars«eld (ARG),12,0
+Colombia,FW,SUAREZ Luis,Sporting CP (POR),15,5
+Colombia,FW,GOMEZ Andres,CR Vasco Da Gama (BRA),9,2
+Croatia,GK,LIVAKOVIC Dominik,GNK Dinamo Zagreb (CRO),78,0
+Croatia,DF,STANISIC Josip,FC Bayern München (GER),34,0
+Croatia,DF,PONGRACIC Marin,ACF Fiorentina (ITA),22,0
+Croatia,DF,CALETA-CAR Duje,Real Sociedad (ESP),38,1
+Croatia,DF,SUTALO Josip,AFC Ajax (NED),36,0
+Croatia,MF,MORO Nikola,Bologna FC (ITA),10,0
+Croatia,FW,KRAMARIC Andrej,TSG Hoffenheim (GER),118,36
+Croatia,MF,MODRIC Luka,AC Milan (ITA),201,29
+Croatia,FW,BUDIMIR Ante,CA Osasuna (ESP),40,7
+Croatia,GK,PANDUR Ivor,Hull City FC (ENG),0,0
+Croatia,MF,VLASIC Nikola,Torino FC (ITA),65,11
+Croatia,FW,PERISIC Ivan,PSV Eindhoven (NED),157,38
+Croatia,MF,PASALIC Mario,Atalanta Bergamo (ITA),88,12
+Croatia,MF,BATURINA Martin,Como (ITA),22,2
+Croatia,MF,SUCIC Petar,FC Internazionale Milano (ITA),20,2
+Croatia,DF,JAKIC Kristijan,FC Augsburg (GER),17,2
+Croatia,MF,FRUK Toni,HNK Rijeka (CRO),7,1
+Croatia,FW,MATANOVIC Igor,SC Freiburg (GER),11,2
+Croatia,MF,SUCIC Luka,Real Sociedad (ESP),22,1
+Croatia,GK,KOTARSKI Dominik,FC København (DEN),4,0
+Croatia,FW,PASALIC Marco,Orlando City SC (USA),18,1
+Croatia,DF,ERLIC Martin,FC Midtjylland (DEN),13,1
+Croatia,FW,MUSA Petar,FC Dallas (USA),13,2
+Ecuador,GK,GALINDEZ Hernan,CA Huracán (ARG),39,0
+Ecuador,DF,TORRES Felix,SC Internacional (BRA),50,5
+Ecuador,DF,ORDONEZ Joel,Club Brugge (BEL),20,0
+Ecuador,MF,ALCIVAR Jordy,Independiente Del Valle (ECU),12,1
+Ecuador,DF,PACHO Willian,Paris Saint-Germain (FRA),38,2
+Ecuador,MF,VALENCIA Anthony,Royal Antwerp FC (BEL),3,1
+Ecuador,FW,YEBOAH John,Venezia FC (ITA),26,3
+Ecuador,MF,PAEZ Kendry,CA River Plate (ARG),27,2
+Ecuador,FW,RODRIGUEZ Kevin,Royale Union Saint-Gilloise (BEL),35,2
+Ecuador,GK,RAMIREZ Moises,AE Ki«sia FC (GRE),7,0
+Ecuador,FW,VALENCIA Enner,CF Pachuca (MEX),109,49
+Ecuador,MF,MINDA Alan,Atlético Mineiro (BRA),21,2
+Ecuador,MF,VITE Pedro,Pumas UNAM (MEX),21,1
+Ecuador,FW,CAICEDO Jordy,CA Huracán (ARG),23,4
+Ecuador,DF,PRECIADO Angelo,Atlético Mineiro (BRA),60,0
+Ecuador,MF,CASTILLO Denil,FC Midtjylland (DEN),5,0
+Ecuador,FW,PLATA Gonzalo,CR Flamengo (BRA),54,9
+Ecuador,MF,FRANCO Alan,Atlético Mineiro (BRA),62,1
+Ecuador,GK,VALLE Gonzalo,LDU Quito (ECU),4,0
+Ecuador,FW,AREVALO Jeremy,VfB Stuttgart (GER),4,0
+Ecuador,DF,POROZO Jackson,Club Tijuana (MEX),10,1
+Ecuador,DF,MEDINA Yaimar,KRC Genk (BEL),7,0
+Egypt,GK,MOHAMED ELSHENAWY,Al Ahly FC (EGY),77,0
+Egypt,DF,YASSER IBRAHIM,Al Ahly FC (EGY),21,1
+Egypt,DF,MOHAMED HANY,Al Ahly FC (EGY),46,0
+Egypt,DF,HOSSAM ABDELMAGUID,Zamalek SC (EGY),14,0
+Egypt,DF,RAMY RABIA,Al Ain FC (UAE),50,6
+Egypt,DF,MOHAMED ABDELMONEIM,OGC Nice (FRA),38,3
+Egypt,FW,TREZEGUET,Al Ahly FC (EGY),98,24
+Egypt,MF,EMAM ASHOUR,Al Ahly FC (EGY),32,1
+Egypt,FW,HAMZA ABDELKARIM,FC Barcelona (ESP),5,0
+Egypt,MF,MOSTAFA ZICO,Pyramids FC (EGY),5,3
+Egypt,FW,HAISSEM HASSAN,Real Oviedo (ESP),4,0
+Egypt,DF,AHMED FATOUH,Zamalek SC (EGY),42,1
+Egypt,MF,HAMDY FATHY,Al Wakrah SC (QAT),66,4
+Egypt,DF,KARIM HAFEZ,Pyramids FC (EGY),10,0
+Egypt,GK,MAHDY SOLIMAN,Zamalek SC (EGY),0,0
+Egypt,MF,MOHANAD LASHIN,Pyramids FC (EGY),26,0
+Egypt,MF,NABIL DONGA,Al Najmah SC (KSA),12,0
+Egypt,MF,MARAWAN ATTIA,Al Ahly FC (EGY),38,1
+Egypt,FW,IBRAHIM ADEL,FC Nordsjælland (DEN),25,3
+Egypt,MF,MAHMOUD SABER,ZED FC (EGY),16,2
+Egypt,GK,MOSTAFA SHOUBIR,Al Ahly FC (EGY),13,0
+Egypt,DF,TAREK ALAA,ZED FC (EGY),3,0
+Egypt,FW,ZIZO,Al Ahly FC (EGY),67,5
+Egypt,GK,MOHAMED ALAA,El Gouna FC (EGY),0,0
+England,FW,KANE Harry,FC Bayern München (GER),117,82
+England,MF,BELLINGHAM Jude,Real Madrid C. F. (ESP),51,8
+England,DF,BURN Dan,Newcastle United FC (ENG),8,0
+England,FW,WATKINS Ollie,Aston Villa FC (ENG),23,7
+England,FW,MADUEKE Noni,Arsenal FC (ENG),14,1
+England,FW,TONEY Ivan,Al Ahli FC (KSA),8,1
+England,DF,QUANSAH Jarell,Bayer 04 Leverkusen (GER),4,0
+France,GK,SAMBA Brice,Stade Rennais FC (FRA),4,0
+France,DF,UPAMECANO Dayot,FC Bayern München (GER),42,2
+France,DF,KOUNDE Jules,FC Barcelona (ESP),52,0
+France,MF,KONE Manu,AS Roma (ITA),16,0
+France,FW,DEMBELE Ousmane,Paris Saint-Germain (FRA),63,11
+France,MF,TCHOUAMENI Aurelien,Real Madrid C. F. (ESP),49,3
+France,FW,THURAM Marcus,FC Internazionale Milano (ITA),35,3
+France,FW,MBAPPE Kylian,Real Madrid C. F. (ESP),102,62
+France,FW,OLISE Michael,FC Bayern München (GER),21,7
+France,FW,BARCOLA Bradley,Paris Saint-Germain (FRA),24,5
+France,MF,KANTE Ngolo,Fenerbahçe SK (TUR),69,2
+France,MF,RABIOT Adrien,AC Milan (ITA),62,7
+France,GK,MAIGNAN Mike,AC Milan (ITA),44,0
+France,MF,ZAIRE-EMERY Warren,Paris Saint-Germain (FRA),11,1
+France,DF,HERNANDEZ Theo,Al Hilal SC (KSA),47,2
+France,FW,DOUE Desire,Paris Saint-Germain (FRA),11,3
+France,DF,HERNANDEZ Lucas,Paris Saint-Germain (FRA),42,0
+France,GK,RISSER Robin,RC Lens (FRA),0,0
+France,MF,AKLIOUCHE Maghnes,AS Monaco (FRA),10,1
+Germany,GK,NEUER Manuel,FC Bayern München (GER),128,0
+Germany,DF,RUEDIGER Antonio,Real Madrid C. F. (ESP),86,3
+Germany,DF,ANTON Waldemar,Borussia Dortmund (GER),15,0
+Germany,DF,TAH Jonathan,FC Bayern München (GER),51,1
+Germany,MF,PAVLOVIC Aleksandar,FC Bayern München (GER),15,1
+Germany,DF,KIMMICH Joshua,FC Bayern München (GER),114,10
+Germany,MF,GORETZKA Leon,FC Bayern München (GER),73,15
+Germany,MF,LEWELING Jamie,VfB Stuttgart (GER),6,1
+Germany,MF,MUSIALA Jamal,FC Bayern München (GER),46,10
+Germany,GK,BAUMANN Oliver,TSG Hoffenheim (GER),13,0
+Germany,FW,BEIER Maximilian,Borussia Dortmund (GER),10,0
+Germany,DF,SCHLOTTERBECK Nico,Borussia Dortmund (GER),29,1
+Germany,MF,STILLER Angelo,VfB Stuttgart (GER),9,0
+Germany,DF,BROWN Nathaniel,Eintracht Frankfurt (GER),8,1
+Germany,MF,SANE Leroy,Galatasaray SK (TUR),80,18
+Germany,MF,AMIRI Nadiem,1. FSV Mainz 05 (GER),13,1
+Germany,GK,NUEBEL Alexander,VfB Stuttgart (GER),3,0
+Germany,DF,RAUM David,RB Leipzig (GER),39,1
+Germany,MF,NMECHA Felix,Borussia Dortmund (GER),12,2
+Germany,MF,OUEDRAOGO Assan,RB Leipzig (GER),1,1
+Germany,FW,UNDAV Deniz,VfB Stuttgart (GER),13,9
+Ghana,GK,ZIGI Lawrence Ati,FC St. Gallen (SUI),31,0
+Ghana,DF,SEIDU Alidu,Stade Rennais FC (FRA),24,1
+Ghana,MF,YIRENKYI Caleb,FC Nordsjælland (DEN),14,2
+Ghana,DF,ADJETEY Jonas,VfL Wolfsburg (GER),13,0
+Ghana,MF,PARTEY Thomas,Villarreal CF (ESP),61,16
+Ghana,DF,MUMIN Abdul,Rayo Vallecano (ESP),5,0
+Ghana,FW,FATAWU Abdul,Leicester City FC (ENG),31,3
+Ghana,MF,SIBO Kwasi,Real Oviedo (ESP),11,0
+Ghana,FW,AYEW Jordan,Leicester City FC (ENG),123,34
+Ghana,FW,THOMAS-ASANTE Brandon,Coventry City FC (ENG),10,1
+Ghana,GK,ANANG Joseph,St Patrick's Athletic FC (IRL),1,0
+Ghana,FW,BONSU BAAH Christopher,Al Qadsiah FC (KSA),9,0
+Ghana,DF,MENSAH Gideon,AJ Auxerre (FRA),43,0
+Ghana,MF,OWUSU Elisha,AJ Auxerre (FRA),22,0
+Ghana,GK,ASARE Benjamin,Hearts Of Oak SC (GHA),16,0
+Ghana,DF,RAHMAN Baba,PAOK Saloniki (GRE),54,1
+Ghana,DF,OPOKU Jerome,Başakşehir FK (TUR),13,1
+Ghana,FW,WILLIAMS Inaki,Athletic Club (ESP),27,2
+Ghana,MF,BOAKYE Augustine,AS Saint-Etienne (FRA),0,0
+Ghana,DF,OPPONG Kojo Peprah,OGC Nice (FRA),6,0
+Ghana,FW,SULEMANA Kamaldeen,Atalanta Bergamo (ITA),30,1
+Ghana,DF,LUCKASSEN Derrick,Pafos FC (CYP),2,1
+Ghana,FW,NUAMAH Ernest,Olympique Lyonnais (FRA),21,4
+Ghana,FW,ADU Prince,FC Viktoria Plzeň (CZE),7,0
+Ghana,DF,SENAYA Marvin,AJ Auxerre (FRA),5,0
+Japan,GK,SUZUKI Zion,Parma (ITA),29,0
+Japan,DF,SUGAWARA Yukinari,SV Werder Bremen (GER),26,2
+Japan,DF,TANIGUCHI Shogo,Sint-Truiden VV (BEL),42,1
+Japan,DF,ITAKURA Kou,AFC Ajax (NED),43,3
+Japan,DF,NAGATOMO Yuto,FC Tokyo (JPN),146,4
+Japan,FW,MACHINO Shuto,Borussia Mönchengladbach (GER),15,5
+Japan,MF,KUBO Takefusa,Real Sociedad (ESP),50,7
+Japan,FW,GOTO Keisuke,Sint-Truiden VV (BEL),5,0
+Japan,MF,DOAN Ritsu,Eintracht Frankfurt (GER),70,11
+Japan,MF,MAEDA Daizen,Celtic FC (SCO),31,6
+Japan,GK,OSAKO Keisuke,Sanfrecce Hiroshima (JPN),11,0
+Japan,MF,NAKAMURA Keito,Stade Reims (FRA),30,12
+Japan,MF,ITO Junya,KRC Genk (BEL),73,16
+Japan,DF,WATANABE Tsuyoshi,Feyenoord Rotterdam (NED),14,0
+Japan,MF,SUZUKI Yuito,SC Freiburg (GER),7,0
+Japan,FW,UEDA Ayase,Feyenoord Rotterdam (NED),44,18
+Japan,FW,OGAWA Koki,NEC Nijmegen (NED),18,11
+Japan,DF,SEKO Ayumu,Le Havre AC (FRA),16,0
+Japan,DF,ITO Hiroki,FC Bayern München (GER),29,1
+Japan,DF,TOMIYASU Takehiro,AFC Ajax (NED),46,1
+Japan,GK,HAYAKAWA Tomoki,Kashima Antlers (JPN),4,0
+Japan,MF,SANO Kaishu,1. FSV Mainz 05 (GER),17,1
+Japan,DF,SUZUKI Junnosuke,FC København (DEN),8,0
+Japan,FW,SHIOGAI Kento,VfL Wolfsburg (GER),3,0
+Mexico,GK,RANGEL Raul,CD Guadalajara (MEX),18,0
+Mexico,DF,SANCHEZ Jorge,PAOK Saloniki (GRE),62,3
+Mexico,DF,MONTES Cesar,FC Lokomotiv Moscow (RUS),71,4
+Mexico,DF,VASQUEZ Johan,Genoa CFC (ITA),49,3
+Mexico,MF,LIRA Erik,CF Cruz Azul (MEX),28,0
+Mexico,MF,ROMO Luis,CD Guadalajara (MEX),65,5
+Mexico,MF,FIDALGO Alvaro,Real Betis (ESP),6,1
+Mexico,FW,VEGA Alexis,Deportivo Toluca FC (MEX),53,7
+Mexico,FW,GIMENEZ Santiago,AC Milan (ITA),50,6
+Mexico,GK,ACEVEDO Carlos,Club Santos Laguna (MEX),7,0
+Mexico,GK,OCHOA Guillermo,AEL Limassol (CYP),154,0
+Mexico,FW,GONZALEZ Armando,CD Guadalajara (MEX),8,1
+Mexico,DF,REYES Israel,Club América (MEX),38,2
+Mexico,FW,QUINONES Julian,Al Qadsiah FC (KSA),26,5
+Mexico,MF,PINEDA Orbelin,AEK Athens (GRE),94,12
+Mexico,MF,VARGAS Obed,Atlético De Madrid (ESP),9,0
+Mexico,MF,MORA Gilberto,Club Tijuana (MEX),11,0
+Mexico,DF,CHAVEZ Mateo,AZ Alkmaar (NED),11,1
+Mexico,FW,HUERTA Cesar,RSC Anderlecht (BEL),27,3
+Mexico,FW,MARTINEZ Guillermo,Pumas UNAM (MEX),13,3
+Mexico,DF,GALLARDO Jesus,Deportivo Toluca FC (MEX),126,3
+Mexico,MF,CHAVEZ Luis,FC Dynamo Moscow (RUS),46,5
+Mexico,FW,ALVARADO Roberto,CD Guadalajara (MEX),72,5
+Mexico,MF,GUTIERREZ Brian,CD Guadalajara (MEX),10,2
+Morocco,GK,BOUNOU Yassine,Al Hilal SC (KSA),94,0
+Morocco,DF,HAKIMI Achraf,Paris Saint-Germain (FRA),100,12
+Morocco,MF,AMRABAT Sofyan,Real Betis (ESP),76,0
+Morocco,DF,SAADANE Marwane,Al Fateh SC (KSA),17,1
+Morocco,MF,BOUADDI Ayyoub,Lille OSC (FRA),6,0
+Morocco,MF,OUNAHI Azzedine,Girona FC (ESP),53,9
+Morocco,FW,RAHIMI Sou«ane,Al Ain FC (UAE),41,13
+Morocco,FW,DIAZ Brahim,Real Madrid C. F. (ESP),30,15
+Morocco,MF,SAIBARI Ismael,PSV Eindhoven (NED),34,12
+Morocco,GK,EL KAJOUI Munir,RS Berkane (MAR),52,0
+Morocco,DF,EL OUAHDI Zakaria,KRC Genk (BEL),3,0
+Morocco,MF,EL MOURABET Samir,RC Strasbourg (FRA),8,0
+Morocco,MF,YASSINE Gessime,RC Strasbourg (FRA),6,1
+Morocco,FW,SBAI Amine,Angers SCO (FRA),2,0
+Morocco,DF,BELAMMARI Youssef,Al Ahly FC (EGY),18,0
+Morocco,FW,EL KAABI Ayoub,Olympiacos FC (GRE),72,36
+Morocco,FW,AMAIMOUNI Ayoube,Eintracht Frankfurt (GER),4,0
+Morocco,GK,TAGNAOUTI Ahmed Reda,ASFAR (MAR),3,0
+Morocco,MF,EL KHANNOUSS Bilal,VfB Stuttgart (GER),41,3
+Morocco,MF,EL AYNAOUI Neil,AS Roma (ITA),20,2
+Morocco,DF,HALHAL Redouane,KV Mechelen (BEL),4,0
+Morocco,DF,SALAH EDDINE Anass,PSV Eindhoven (NED),12,0
+Netherlands,MF,DE ROON Marten,Atalanta Bergamo (ITA),44,1
+Netherlands,FW,WEGHORST Wout,AFC Ajax (NED),53,14
+Netherlands,FW,DEPAY Memphis,SC Corinthians (BRA),112,55
+Netherlands,MF,TIL Guus,PSV Eindhoven (NED),8,1
+Netherlands,FW,LANG Noa,Galatasaray SK (TUR),17,3
+Netherlands,MF,KOOPMEINERS Teun,Juventus FC (ITA),32,3
+Netherlands,MF,DE JONG Frenkie,FC Barcelona (ESP),70,2
+Netherlands,DF,DUMFRIES Denzel,FC Internazionale Milano (ITA),76,11
+Netherlands,GK,FLEKKEN Mark,Bayer 04 Leverkusen (GER),12,0
+Netherlands,MF,TIMBER Quinten,Olympique Marseille (FRA),13,1
+New Zealand,GK,CROCOMBE Max,Millwall FC (ENG),27,0
+New Zealand,DF,PAYNE Tim,Wellington Phoenix FC (NZL),55,3
+New Zealand,DF,DE VRIES Francis,Auckland FC (NZL),22,1
+New Zealand,DF,BINDON Tyler,She­eld United FC (ENG),28,2
+New Zealand,DF,BOXALL Michael,Minnesota United FC (USA),67,1
+New Zealand,MF,BELL Joe,Viking Stavanger (NOR),35,1
+New Zealand,FW,ROGERSON Logan,Auckland FC (NZL),18,2
+New Zealand,FW,WOOD Chris,Nottingham Forest FC (ENG),93,45
+New Zealand,MF,SINGH Sarpreet,Wellington Phoenix FC (NZL),31,3
+New Zealand,MF,JUST Elijah,Motherwell FC (SCO),47,12
+New Zealand,GK,PAULSEN Alex,Lechia Gdańsk (POL),8,0
+New Zealand,DF,CACACE Liberato,Wrexham AFC (WAL),40,1
+New Zealand,MF,RUFER Alex,Wellington Phoenix FC (NZL),26,0
+New Zealand,DF,PIJNAKER Nando,Auckland FC (NZL),26,0
+New Zealand,DF,SURMAN Finn,Portland Timbers (USA),22,3
+New Zealand,FW,BARBAROUSES Kosta,WS Wanderers FC (AUS),76,10
+New Zealand,FW,WAINE Ben,Port Vale FC (ENG),31,9
+New Zealand,MF,OLD Ben,AS Saint-Etienne (FRA),27,2
+New Zealand,MF,McCOWATT Callum,Silkeborg IF (DEN),36,5
+New Zealand,FW,RANDALL Jesse,Auckland FC (NZL),14,2
+New Zealand,GK,WOUD Michael,Auckland FC (NZL),7,0
+New Zealand,MF,THOMAS Ryan,PEC Zwolle (NED),28,3
+New Zealand,DF,ELLIOT Callan,Auckland FC (NZL),12,0
+New Zealand,MF,BAYLISS Lachlan,Newcastle United Jets FC (AUS),4,0
+New Zealand,DF,SMITH Tommy,Braintree Town FC (ENG),57,2
+Norway,GK,NYLAND Orjan,Sevilla FC (ESP),74,0
+Norway,MF,THORSBY Morten,US Cremonese (ITA),32,0
+Norway,DF,OSTIGARD Leo,Genoa CFC (ITA),41,2
+Norway,MF,BERG Patrick,FK Bodø/Glimt (NOR),47,0
+Norway,FW,SORLOTH Alexander,Atlético De Madrid (ESP),75,26
+Norway,GK,TANGVIK Sander,Hamburger SV (GER),0,0
+Norway,GK,SELVIK Egil,Watford FC (ENG),8,0
+Norway,MF,AURSNES Fredrik,SL Ben«ca (POR),26,1
+Norway,DF,BJORKAN Fredrik Andre,FK Bodø/Glimt (NOR),22,1
+Norway,DF,HOLMGREN PEDERSEN Marcus,Torino FC (ITA),35,1
+Norway,DF,HEGGEM Torbjorn,Bologna FC (ITA),18,0
+Norway,MF,THORSTVEDT Kristian,US Sassuolo (ITA),39,4
+Norway,MF,AASGAARD Thelo,Rangers FC (SCO),9,6
+Norway,FW,NUSA Antonio,RB Leipzig (GER),28,9
+Norway,MF,SCHJELDERUP Andreas,SL Ben«ca (POR),16,1
+Norway,MF,HAUGE Jens Petter,FK Bodø/Glimt (NOR),16,1
+Norway,DF,LANGAS Sondre,Derby County FC (ENG),4,0
+Norway,DF,FALCHENER Henrik,Viking Stavanger (NOR),2,0
+Norway,FW,RYERSON Julian,Borussia Dortmund (GER),45,1
+Paraguay,GK,FERNANDEZ Gatito,Cerro Porteño (PAR),30,0
+Paraguay,DF,VELAZQUEZ Gustavo,Cerro Porteño (PAR),17,1
+Paraguay,DF,CACERES Juan Jose,FC Dynamo Moscow (RUS),21,0
+Paraguay,DF,BALBUENA Fabian,Grêmio FBPA (BRA),48,2
+Paraguay,DF,ALONSO Junior,Atlético Mineiro (BRA),75,3
+Paraguay,MF,SOSA Ramon,SE Palmeiras (BRA),30,1
+Paraguay,FW,SANABRIA Antonio,US Cremonese (ITA),50,7
+Paraguay,MF,ALMIRON Miguel,Atlanta United FC (USA),79,10
+Paraguay,MF,MAURICIO,SE Palmeiras (BRA),6,1
+Paraguay,GK,GILL Orlando,CA San Lorenzo (ARG),10,0
+Paraguay,DF,CANALE Jose,CA Lanús (ARG),5,0
+Paraguay,MF,CUBAS Andres,Vancouver Whitecaps FC (CAN),37,0
+Paraguay,DF,GOMEZ Gustavo,SE Palmeiras (BRA),93,4
+Paraguay,MF,BOBADILLA Damian,São Paulo FC (BRA),23,1
+Paraguay,FW,ROMERO GAMARRA Alejandro,Al Ain FC (UAE),35,6
+Paraguay,FW,ARCE Alex,CS Independiente Rivadavia (ARG),17,1
+Paraguay,MF,OJEDA Braian,Orlando City SC (USA),18,0
+Paraguay,FW,AVALOS Gabriel,CA Independiente (ARG),26,2
+Paraguay,GK,OLVEIRA Gaston,Club Olimpia (PAR),1,0
+Paraguay,MF,GALARZA Matias,Atlanta United FC (USA),18,4
+Paraguay,MF,CABALLERO Gustavo,Portsmouth FC (ENG),3,1
+Paraguay,FW,PITTA Isidro,Red Bull Bragantino (BRA),6,0
+Paraguay,DF,MAIDANA Alexandro,CA Talleres (ARG),4,1
+Portugal,GK,DIOGO COSTA,FC Porto (POR),46,0
+Portugal,DF,NELSON SEMEDO,Fenerbahçe SK (TUR),52,0
+Portugal,DF,TOMAS ARAUJO,SL Ben«ca (POR),6,0
+Portugal,FW,CRISTIANO RONALDO,Al Nassr FC (KSA),231,145
+Portugal,FW,GONCALO RAMOS,Paris Saint-Germain (FRA),26,10
+Portugal,FW,JOAO FELIX,Al Nassr FC (KSA),56,12
+Portugal,DF,RENATO VEIGA,Villarreal CF (ESP),16,1
+Portugal,DF,GONCALO INACIO,Sporting CP (POR),22,2
+Portugal,FW,FRANCISCO TRINCAO,Sporting CP (POR),19,3
+Portugal,FW,RAFAEL LEAO,AC Milan (ITA),47,6
+Portugal,DF,JOAO CANCELO,FC Barcelona (ESP),71,12
+Portugal,MF,RUBEN NEVES,Al Hilal SC (KSA),68,1
+Portugal,GK,RUI SILVA,Sporting CP (POR),3,0
+Portugal,MF,VITINHA,Paris Saint-Germain (FRA),41,0
+Portugal,DF,SAMU COSTA,RCD Mallorca (ESP),7,0
+Portugal,DF,NUNO MENDES,Paris Saint-Germain (FRA),47,2
+Portugal,FW,FRANCISCO CONCEICAO,Juventus FC (ITA),19,4
+Scotland,MF,McTOMINAY Scott,SSC Napoli (ITA),73,15
+Scotland,DF,HANLEY Grant,Hibernian FC (SCO),70,2
+Scotland,DF,TIERNEY Kieran,Celtic FC (SCO),58,2
+Scotland,FW,DYKES Lyndon,Charlton Athletic FC (ENG),53,10
+Scotland,FW,ADAMS Che,Torino FC (ITA),50,13
+Scotland,GK,KELLY Liam,Rangers FC (SCO),3,0
+Scotland,DF,HENDRY Jack,Al Ettifaq FC (KSA),41,3
+Scotland,FW,STEWART Ross,Southampton FC (ENG),4,0
+Scotland,DF,SOUTTAR John,Rangers FC (SCO),24,2
+Scotland,DF,HYAM Dominic,Wrexham AFC (WAL),4,0
+Scotland,FW,HIRST George,Ipswich Town FC (ENG),10,1
+Scotland,MF,FERGUSON Lewis,Bologna FC (ITA),27,1
+Scotland,FW,SHANKLAND Lawrence,Heart Of Midlothian FC (SCO),22,7
+Scotland,GK,GORDON Craig,Heart Of Midlothian FC (SCO),84,0
+Scotland,MF,McLEAN Kenny,Norwich City FC (ENG),61,3
+Scotland,DF,RALSTON Anthony,Celtic FC (SCO),29,1
+Scotland,FW,CURTIS Findlay,Kilmarnock FC (SCO),5,1
+Scotland,DF,McKENNA Scott,GNK Dinamo Zagreb (CRO),51,1
+Senegal,GK,DIOUF Yehvann,OGC Nice (FRA),2,0
+Senegal,DF,KOULIBALY Kalidou,Al Hilal SC (KSA),106,2
+Senegal,DF,SECK Abdoulaye,Maccabi Haifa FC (ISR),24,4
+Senegal,MF,CISS Pathe,Rayo Vallecano (ESP),34,0
+Senegal,FW,DIAO Assane,Como (ITA),6,0
+Senegal,MF,CAMARA Lamine,AS Monaco (FRA),48,7
+Senegal,FW,DIENG Bamba,FC Lorient (FRA),24,2
+Senegal,FW,MANE Sadio,Al Nassr FC (KSA),133,54
+Senegal,FW,NDIAYE Cherif,Samsunspor (TUR),19,4
+Senegal,DF,JAKOBS Ismail,Galatasaray SK (TUR),33,0
+Senegal,DF,DIATTA Krepin,AS Monaco (FRA),65,2
+Senegal,GK,MENDY Edouard,Al Ahli FC (KSA),60,0
+Senegal,DF,NIAKHATE Moussa,Olympique Lyonnais (FRA),35,0
+Senegal,FW,MBAYE Ibrahim,Paris Saint-Germain (FRA),14,4
+Senegal,MF,NDIAYE Bara Sapoko,FC Bayern München (GER),1,0
+Senegal,GK,DIAW Mory,Le Havre AC (FRA),7,0
+Senegal,DF,MENDY Antoine,OGC Nice (FRA),7,0
+Senegal,MF,GUEYE Pape,Villarreal CF (ESP),45,8
+South Africa,GK,WILLIAMS Ronwen,Mamelodi Sundowns FC (RSA),68,0
+South Africa,DF,MATULUDI Thabang,Polokwane City FC (RSA),3,0
+South Africa,DF,NDAMANE Khulumani,Mamelodi Sundowns FC (RSA),5,0
+South Africa,MF,MOKOENA Teboho,Mamelodi Sundowns FC (RSA),60,10
+South Africa,MF,MBATHA Thalente,Orlando Pirates FC (RSA),20,3
+South Africa,DF,MODIBA Aubrey,Mamelodi Sundowns FC (RSA),52,3
+South Africa,FW,APPOLLIS Oswin,Orlando Pirates FC (RSA),31,8
+South Africa,FW,MOREMI Tshepang,Orlando Pirates FC (RSA),12,1
+South Africa,FW,MOFOKENG Relebohile,Orlando Pirates FC (RSA),17,1
+South Africa,MF,ZWANE Themba,Mamelodi Sundowns FC (RSA),56,12
+South Africa,FW,MASEKO Thapelo,AEL Limassol (CYP),11,2
+South Africa,MF,SITHOLE Sphephelo,CD Tondela (POR),32,1
+South Africa,DF,MBOKAZI Mbekezeli,Chicago Fire FC (USA),14,1
+South Africa,FW,RAYNERS Iqraam,Mamelodi Sundowns FC (RSA),24,5
+South Africa,GK,CHAINE Sipho,Orlando Pirates FC (RSA),4,0
+South Africa,FW,MAKGOPA Evidence,Orlando Pirates FC (RSA),31,6
+South Africa,DF,KABINI Samukele,Molde FK (NOR),6,0
+South Africa,DF,SIBISI Nkosinathi,Orlando Pirates FC (RSA),22,0
+South Africa,DF,MUDAU Khuliso,Mamelodi Sundowns FC (RSA),38,1
+South Africa,DF,OKON Ime,Hannover 96 (GER),12,1
+South Africa,GK,GOSS Ricardo,Siwelele FC (RSA),7,0
+South Africa,MF,ADAMS Jayden,Mamelodi Sundowns FC (RSA),11,2
+South Africa,DF,MAKHANYA Olwethu,Philadelphia Union (USA),1,0
+South Africa,FW,SEBELEBELE Kamogelo,Orlando Pirates FC (RSA),10,1
+South Africa,DF,CROSS Bradley,Kaizer Chiefs FC (RSA),1,0
+Spain,DF,PUBILL Marc,Atlético De Madrid (ESP),2,0
+Spain,DF,GRIMALDO Alex,Bayer 04 Leverkusen (GER),14,0
+Spain,DF,GARCIA Eric,FC Barcelona (ESP),21,0
+Spain,DF,LLORENTE Marcos,Atlético De Madrid (ESP),26,0
+Spain,FW,TORRES Ferran,FC Barcelona (ESP),60,24
+Spain,MF,RUIZ Fabian,Paris Saint-Germain (FRA),45,6
+Spain,MF,GAVI,FC Barcelona (ESP),31,5
+Spain,FW,OLMO Dani,FC Barcelona (ESP),53,12
+Spain,GK,GARCIA Joan,FC Barcelona (ESP),2,0
+Spain,DF,LAPORTE Aymeric,Athletic Club (ESP),49,2
+Spain,MF,BAENA Alex,Atlético De Madrid (ESP),19,3
+Spain,FW,WILLIAMS Nico,Athletic Club (ESP),33,6
+Spain,FW,YAMAL Lamine,FC Barcelona (ESP),28,7
+Spain,MF,PEDRI,FC Barcelona (ESP),44,6
+Spain,FW,OYARZABAL Mikel,Real Sociedad (ESP),56,27
+Spain,DF,CUBARSI Pau,FC Barcelona (ESP),15,0
+Spain,GK,SIMON Unai,Athletic Club (ESP),61,0
+Spain,FW,MUNOZ Victor,CA Osasuna (ESP),2,1
+Spain,FW,IGLESIAS Borja,RC Celta Vigo (ESP),8,0
+Sweden,GK,WIDELL ZETTERSTROM Jacob,Derby County FC (ENG),5,0
+Sweden,DF,LAGERBIELKE Gustaf,SC Braga (POR),15,2
+Sweden,DF,HIEN Isak,Atalanta Bergamo (ITA),32,0
+Sweden,DF,JOHANSSON Herman,FC Dallas (USA),3,0
+Sweden,DF,SVENSSON Daniel,Borussia Dortmund (GER),16,0
+Sweden,MF,NYGREN Benjamin,Celtic FC (SCO),15,3
+Sweden,GK,JOHANSSON Viktor,Stoke City FC (ENG),12,0
+Sweden,MF,SEMA Ken,Pafos FC (CYP),33,5
+Sweden,DF,STARFELT Carl,RC Celta Vigo (ESP),19,0
+Sweden,MF,KARLSTROM Jesper,Udinese (ITA),26,0
+Sweden,MF,SVANBERG Mattias,VfL Wolfsburg (GER),42,3
+Sweden,DF,SMITH Eric,FC St. Pauli (GER),2,0
+Sweden,DF,BERNHARDSSON Alexander,Holstein Kiel (GER),14,0
+Sweden,MF,ZENELI Besfort,Royale Union Saint-Gilloise (BEL),10,0
+Sweden,GK,NORDFELDT Kristoffer,AIK Stockholm (SWE),23,0
+Sweden,DF,STROUD Elliot,Mjällby AIF (SWE),5,0
+Sweden,FW,NILSSON Gustaf,Club Brugge (BEL),10,4
+Sweden,FW,ALI Taha,Malmö FF (SWE),4,0
+Switzerland,GK,KOBEL Gregor,Borussia Dortmund (GER),24,0
+Switzerland,DF,MUHEIM Miro,Hamburger SV (GER),11,0
+Switzerland,DF,WIDMER Silvan,1. FSV Mainz 05 (GER),62,5
+Switzerland,DF,ELVEDI Nico,Borussia Mönchengladbach (GER),70,3
+Switzerland,MF,ZAKARIA Denis,AS Monaco (FRA),66,3
+Switzerland,FW,EMBOLO Breel,Stade Rennais FC (FRA),89,25
+Switzerland,MF,FREULER Remo,Bologna FC (ITA),91,11
+Switzerland,MF,MANZAMBI Johan,SC Freiburg (GER),15,6
+Switzerland,GK,MVOGO Yvon,FC Lorient (FRA),13,0
+Switzerland,DF,RODRIGUEZ Ricardo,Real Betis (ESP),141,9
+Switzerland,MF,JASHARI Ardon,AC Milan (ITA),9,0
+Switzerland,MF,SOW Djibril,Sevilla FC (ESP),54,0
+Switzerland,FW,FASSNACHT Christian,BSC Young Boys (SUI),24,5
+Switzerland,FW,VARGAS Ruben,Sevilla FC (ESP),64,13
+Switzerland,DF,COEMERT Eray,Valencia CF (ESP),22,0
+Switzerland,MF,AEBISCHER Michel,Pisa SC (ITA),43,2
+Switzerland,GK,KELLER Marvin,BSC Young Boys (SUI),1,0
+Switzerland,MF,RIEDER Fabian,FC Augsburg (GER),30,1
+Switzerland,DF,AMENDA Aurele,Eintracht Frankfurt (GER),7,0
+Switzerland,DF,JAQUEZ Luca,VfB Stuttgart (GER),5,0
+Switzerland,FW,ITTEN Cedric,Fortuna Düsseldorf (GER),17,5
+Tunisia,GK,CHAMAKH Mouhib,Club Africain (TUN),4,0
+Tunisia,DF,ABDI Ali,OGC Nice (FRA),49,7
+Tunisia,DF,TALBI Montassar,FC Lorient (FRA),67,4
+Tunisia,DF,REKIK Omar,NK Maribor (SVN),8,1
+Tunisia,DF,AROUS Adam,Kasımpaşa SK (TUR),2,0
+Tunisia,DF,BRONN Dylan,Servette FC (SUI),53,2
+Tunisia,FW,ACHOURI Elias,FC København (DEN),33,5
+Tunisia,FW,SAAD Elias,Hannover 96 (GER),17,3
+Tunisia,FW,MASTOURI Hazem,FC Dynamo Makhachkala (RUS),20,5
+Tunisia,MF,GHARBI Ismael,FC Augsburg (GER),20,2
+Tunisia,DF,BEN OUANES Mortadha,Kasımpaşa SK (TUR),19,0
+Tunisia,MF,KHEDIRA Rani,1. FC Union Berlin (GER),6,0
+Tunisia,MF,AYARI Khalil,Paris Saint-Germain (FRA),4,0
+Tunisia,MF,HADJ MAHMOUD Mohamed,FC Lugano (SUI),11,0
+Tunisia,GK,DAHMEN Aymen,CS Sfaxien (TUN),39,0
+Tunisia,MF,SKHIRI Ellyes,Eintracht Frankfurt (GER),86,4
+Tunisia,FW,ELLOUMI Rayan,Vancouver Whitecaps FC (CAN),4,0
+Tunisia,FW,CHAOUAT Firas,Club Africain (TUN),33,6
+Tunisia,DF,VALERY Yan,BSC Young Boys (SUI),25,0
+Tunisia,DF,BEN HMIDA Mohamed Amine,Espérance De Tunisie (TUN),16,0
+Tunisia,GK,BEN HESSEN Sabri,Étoile Du Sahel (TUN),1,0
+Tunisia,DF,NEFFATI Moutaz,IFK Norrköping FK (SWE),5,0
+Tunisia,DF,CHIKHAOUI Raed,US Monastir (TUN),0,0
+Tunisia,MF,SLIMANE Anis,Norwich City FC (ENG),43,4
+Tunisia,MF,TOUNEKTI Sebastian,Celtic FC (SCO),15,1
+Uruguay,GK,ROCHET Sergio,SC Internacional (BRA),36,0
+Uruguay,DF,GIMENEZ Jose Maria,Atlético De Madrid (ESP),99,8
+Uruguay,DF,CACERES Sebastian,Club América (MEX),26,0
+Uruguay,DF,ARAUJO Ronald,FC Barcelona (ESP),27,1
+Uruguay,MF,DE LA CRUZ Nicolas,CR Flamengo (BRA),37,5
+Uruguay,MF,VALVERDE Federico,Real Madrid C. F. (ESP),76,9
+Uruguay,MF,DE ARRASCAETA Giorgian,CR Flamengo (BRA),59,13
+Uruguay,FW,PELLISTRI Facundo,Panathinaikos FC (GRE),39,2
+Uruguay,GK,MELE Santiago,CF Monterrey (MEX),8,0
+Uruguay,DF,VARELA Guillermo,CR Flamengo (BRA),30,0
+Uruguay,MF,CANOBBIO Agustin,Fluminense FC (BRA),17,2
+Uruguay,DF,OLIVERA Mathias,SSC Napoli (ITA),38,2
+Uruguay,DF,VINA Matias,CA River Plate (ARG),44,1
+Uruguay,FW,RODRIGUEZ Brian,Club América (MEX),36,4
+Uruguay,FW,AGUIRRE Rodrigo,Tigres UANL (MEX),11,3
+Uruguay,MF,ARAUJO Maxi,Sporting CP (POR),31,5
+Uruguay,FW,VINAS Federico,Real Oviedo (ESP),14,2
+Uruguay,MF,PIQUEREZ Joaquin,SE Palmeiras (BRA),19,0
+Uruguay,GK,MUSLERA Fernando,Estudiantes LP (ARG),137,0
+Uruguay,MF,SANABRIA Juan Manuel,Real Salt Lake (USA),8,1
+Uruguay,MF,ZALAZAR Rodrigo,SC Braga (POR),7,2
+Uzbekistan,GK,YUSUPOV Utkir,PFC Navbahor Namangan (UZB),46,0
+Uzbekistan,DF,ALIJONOV Khojiakbar,Pakhtakor Tashkent FK (UZB),54,3
+Uzbekistan,DF,SAYFIEV Farrukh,FK Neftchi Farg'ona (UZB),72,1
+Uzbekistan,DF,ASHURMATOV Rustam,Esteghlal Tehran FC (IRN),54,1
+Uzbekistan,MF,MOZGOVOY Akmal,Pakhtakor Tashkent FK (UZB),28,1
+Uzbekistan,MF,SHUKUROV Otabek,Baniyas Club (UAE),93,10
+Uzbekistan,MF,ISKANDEROV Jamshid,FK Neftchi Farg'ona (UZB),47,4
+Uzbekistan,MF,XAMROBEKOV Odiljon,Tractor Sazi Tabriz FC (IRN),78,1
+Uzbekistan,MF,JIYANOV Ruslanbek,PFC Navbahor Namangan (UZB),9,1
+Uzbekistan,MF,URUNOV Oston,Persepolis FC (IRN),47,10
+Uzbekistan,GK,NEMATOV Abduvohid,Nasaf Qarshi FC (UZB),17,0
+Uzbekistan,DF,NASRULLAEV Sherzod,Pakhtakor Tashkent FK (UZB),43,2
+Uzbekistan,FW,SHOMURODOV Eldor,Başakşehir FK (TUR),96,45
+Uzbekistan,DF,ESHMURODOV Umar,Nasaf Qarshi FC (UZB),40,0
+Uzbekistan,GK,ERGASHEV Botirali,FK Neftchi Farg'ona (UZB),5,0
+Uzbekistan,MF,KHAMDAMOV Dostonbek,Pakhtakor Tashkent FK (UZB),39,5
+Uzbekistan,DF,ABDULLAEV Abdulla,Dibba FC (UAE),31,0
+Uzbekistan,MF,GANIEV Azizjon,Al Bataeh Club (UAE),26,0
+Uzbekistan,FW,AMONOV Azizbek,FK Dinamo Samarkand (UZB),14,2
+Uzbekistan,FW,SERGEEV Igor,Persepolis FC (IRN),88,25
+Uzbekistan,MF,FAYZULLAEV Abbosbek,Başakşehir FK (TUR),35,9
+Uzbekistan,MF,ESANOV Sherzod,FK Buxoro (UZB),2,0
+Uzbekistan,DF,KARIMOV Behruzjon,Surkhon FK (UZB),4,0
+Uzbekistan,DF,ULMASALIYEV Avazbek,OKMK FK (UZB),0,0
+Uzbekistan,DF,UROZOV Jakhongir,FK Dinamo Samarkand (UZB),6,1
