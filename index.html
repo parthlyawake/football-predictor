@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE PREDICTOR MATRIX // FANTASY ENGINE</title>
-    <!-- Google Fonts: Oswald for ultra-heavy condensed headlines, Space Mono for Monospace registers -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;900&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>Fantasy Football Predictor Matrix</title>
+    <!-- Modern sports app typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
     <style>
-        /* 1. DESIGN SYSTEM VARIABLES & RESET */
+        /* 1. DESIGN SYSTEM VARIABLES */
         :root {
-            --canvas-black: #131313;
-            --surface-slate: #2d2d2d;
-            --jelly-mint: #3cffd0;
-            --verge-ultraviolet: #5200ff;
-            --deep-link-blue: #3860be;
-            --hazard-white: #ffffff;
+            --bg-page: #f1f3f5;
+            --bg-card: #ffffff;
+            --bg-bench: #e9ecef;
+            --border-color: #dee2e6;
+            --text-primary: #1a1a1a;
+            --text-secondary: #495057;
+            --text-brand: #2b8a3e; /* Rich grass green for light mode */
+            --brand-blue: #1c7ed6;
+            --accent-gold: #fcc419;
             --absolute-black: #000000;
-            --text-primary: #ffffff;
-            --text-secondary: #a3a3a3;
-            --image-frame: #3f3f46;
+            --absolute-white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --pitch-bg: #2d6a4f;
+            --pitch-stripe: #40916c;
+            --pitch-line: rgba(255, 255, 255, 0.4);
+            
+            --btn-bg: #e9ecef;
+            --btn-hover: #dee2e6;
+        }
+
+        body.dark {
+            --bg-page: #101114;
+            --bg-card: #1e1f24;
+            --bg-bench: #2b2c32;
+            --border-color: #2e3039;
+            --text-primary: #f2f2f2;
+            --text-secondary: #b0b3b8;
+            --text-brand: #3cffd0; /* Vibrant mint green */
+            --brand-blue: #3860be;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --pitch-bg: #1b4332;
+            --pitch-stripe: #2d6a4f;
+            --pitch-line: rgba(255, 255, 255, 0.2);
+            
+            --btn-bg: #2e3039;
+            --btn-hover: #3e414f;
         }
 
         * {
@@ -28,41 +54,28 @@
         }
 
         body {
-            background-color: var(--canvas-black);
+            background-color: var(--bg-page);
             color: var(--text-primary);
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
+            transition: background-color 200ms ease, color 200ms ease;
+            padding-bottom: 40px;
         }
 
-        /* 2. TYPOGRAPHIC REGISTERS */
-        .shout-title {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            line-height: 0.95;
-            letter-spacing: -1px;
-            color: var(--text-primary);
-        }
-
-        .whisper-text {
-            font-family: 'Space Mono', monospace;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-        }
-
-        /* 3. LAYOUT STRUCTURE */
+        /* 2. HEADER */
         header {
-            background-color: var(--canvas-black);
-            border-bottom: 1px solid var(--image-frame);
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 16px 24px;
+            padding: 14px 24px;
+            box-shadow: var(--shadow);
+            transition: background-color 200ms ease, border-color 200ms ease;
         }
 
         .masthead-container {
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -70,81 +83,161 @@
         }
 
         .brand-logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 26px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
             font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
             color: var(--text-primary);
             text-decoration: none;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .brand-logo span {
-            color: var(--jelly-mint);
+            color: var(--text-brand);
         }
 
-        /* Nav Bar Links */
-        .nav-links {
+        .header-actions {
             display: flex;
-            gap: 16px;
-            list-style: none;
-            overflow-x: auto;
-            padding-bottom: 4px;
-            box-shadow: 0px 1px 0px 0px var(--jelly-mint); /* inset active shadow line simulation */
+            align-items: center;
+            gap: 12px;
         }
 
-        .nav-link {
-            font-family: 'Space Mono', monospace;
+        .nav-select {
+            background-color: var(--btn-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 150ms ease, border-color 150ms ease;
+        }
+
+        .nav-select:hover {
+            background-color: var(--btn-hover);
+        }
+
+        .theme-btn {
+            background-color: var(--btn-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 150ms ease;
+        }
+
+        .theme-btn:hover {
+            background-color: var(--btn-hover);
+        }
+
+        /* 3. MAIN STRUCTURE */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* 4. STAT STRIP */
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .stat-strip {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        .stat-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: background-color 200ms ease, border-color 200ms ease;
+        }
+
+        .stat-label {
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
-            color: var(--text-primary);
-            text-decoration: none;
-            padding: 6px 12px;
-            border-radius: 0;
-            transition: color 150ms ease, border-color 150ms ease;
-            cursor: pointer;
-            border-bottom: 2px solid transparent;
-        }
-
-        .nav-link:hover {
-            color: var(--deep-link-blue);
-        }
-
-        .nav-link.active {
-            color: var(--jelly-mint);
-            border-bottom-color: var(--jelly-mint);
-        }
-
-        /* Main view container */
-        main {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 32px 24px;
-        }
-
-        /* Title banner section */
-        .view-header {
-            margin-bottom: 40px;
-        }
-
-        .view-header .kicker {
-            font-size: 14px;
-            color: var(--jelly-mint);
+            letter-spacing: 0.8px;
+            color: var(--text-secondary);
             margin-bottom: 6px;
         }
 
-        .view-header h1 {
-            font-size: clamp(48px, 8vw, 100px);
+        .stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--text-primary);
         }
 
-        /* 4. DASHBOARD LAYOUT (8-col + 4-col) */
+        .stepper-card {
+            align-items: stretch;
+        }
+
+        .stepper-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4px;
+            background-color: var(--bg-page);
+            border-radius: 8px;
+            padding: 4px;
+        }
+
+        .stepper-btn {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 700;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 150ms ease;
+        }
+
+        .stepper-btn:hover:not(:disabled) {
+            background-color: var(--border-color);
+        }
+
+        .stepper-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .stepper-val-text {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* 5. GRID LAYOUTS */
         .dashboard-grid {
             display: grid;
             grid-template-columns: 8fr 4fr;
-            gap: 32px;
+            gap: 24px;
         }
 
         @media (max-width: 900px) {
@@ -153,133 +246,99 @@
             }
         }
 
-        /* Left Column: Pitch & Bench Container */
+        /* 6. PITCH DESIGN */
         .pitch-card {
-            background-color: var(--surface-slate);
-            border: 1px solid var(--image-frame);
-            border-radius: 24px;
-            padding: 24px;
-            position: relative;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: background-color 200ms ease, border-color 200ms ease;
         }
 
         .pitch-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--image-frame);
-            padding-bottom: 16px;
-            margin-bottom: 20px;
-        }
-
-        .pitch-title-cluster h2 {
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .pitch-title-cluster p {
-            font-family: 'Space Mono', monospace;
-            font-size: 11px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            margin-top: 4px;
-        }
-
-        .pitch-meta {
-            display: flex;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
             gap: 12px;
         }
 
-        .meta-stat-pill {
-            background-color: var(--canvas-black);
-            border: 1px solid var(--jelly-mint);
-            border-radius: 20px;
-            color: var(--jelly-mint);
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
+        .pitch-title-cluster h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
             font-weight: 700;
-            padding: 6px 16px;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
         }
 
-        /* Filters */
-        .filter-row {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-        }
-
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .filter-label {
-            font-family: 'Space Mono', monospace;
-            font-size: 10px;
+        .pitch-title-cluster p {
+            font-size: 12px;
             color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
+            margin-top: 2px;
         }
 
-        .filter-select {
-            background-color: var(--canvas-black);
-            border: 1px solid var(--image-frame);
-            color: var(--text-primary);
-            padding: 8px 16px;
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            cursor: pointer;
-            transition: border-color 150ms ease, color 150ms ease;
-        }
-
-        .filter-select:focus {
-            outline: none;
-            border-color: var(--jelly-mint);
-        }
-
-        .filter-select:hover {
-            color: var(--deep-link-blue);
-        }
-
-        /* Tactical Pitch Element */
         .pitch-canvas {
-            background-color: var(--canvas-black);
-            border: 1px solid var(--image-frame);
-            border-radius: 20px;
+            background: var(--pitch-bg);
+            /* alternating stripes */
+            background-image: repeating-linear-gradient(
+                0deg,
+                var(--pitch-bg),
+                var(--pitch-bg) 45px,
+                var(--pitch-stripe) 45px,
+                var(--pitch-stripe) 90px
+            );
+            border-radius: 14px;
             height: 520px;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 20px 10px;
+            padding: 16px 10px;
         }
 
-        /* Soccer Pitch Markings (Thin CSS Lines) */
+        /* Goal Net Graphics (CSS-Only criss-cross net) */
+        .pitch-goal-net {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 38px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-bottom: none;
+            background-image: 
+                linear-gradient(45deg, rgba(255,255,255,0.12) 25%, transparent 25%), 
+                linear-gradient(-45deg, rgba(255,255,255,0.12) 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.12) 75%), 
+                linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.12) 75%);
+            background-size: 8px 8px;
+            background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 1;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        /* Lines */
         .pitch-canvas::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            margin: 10px;
+            border: 1.5px solid var(--pitch-line);
+            margin: 8px;
             pointer-events: none;
+            border-radius: 8px;
         }
 
         .pitch-line-center {
             position: absolute;
             top: 50%;
-            left: 10px;
-            right: 10px;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.05);
+            left: 8px;
+            right: 8px;
+            height: 1.5px;
+            background-color: var(--pitch-line);
             pointer-events: none;
         }
 
@@ -287,9 +346,9 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 120px;
-            height: 120px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100px;
+            height: 100px;
+            border: 1.5px solid var(--pitch-line);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             pointer-events: none;
@@ -297,11 +356,11 @@
 
         .pitch-box-penalty-top {
             position: absolute;
-            top: 10px;
+            top: 8px;
             left: 50%;
-            width: 220px;
-            height: 80px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 200px;
+            height: 65px;
+            border: 1.5px solid var(--pitch-line);
             border-top: none;
             transform: translateX(-50%);
             pointer-events: none;
@@ -309,247 +368,220 @@
 
         .pitch-box-penalty-bottom {
             position: absolute;
-            bottom: 10px;
+            bottom: 8px;
             left: 50%;
-            width: 220px;
-            height: 80px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            width: 200px;
+            height: 65px;
+            border: 1.5px solid var(--pitch-line);
             border-bottom: none;
             transform: translateX(-50%);
             pointer-events: none;
         }
 
-        /* Player Tag Row Positions on Pitch */
         .pitch-row {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 16px;
             z-index: 10;
             position: relative;
         }
 
-        /* Crisp Player Card Component (No Shadows) */
+        /* 7. PLAYER CARD DESIGN */
         .player-card-flat {
-            background-color: var(--surface-slate);
-            border: 1px solid var(--hazard-white);
-            border-radius: 20px;
-            padding: 8px 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-width: 120px;
+            min-width: 90px;
             cursor: pointer;
-            transition: border-color 150ms ease, color 150ms ease;
+            position: relative;
         }
 
-        .player-card-flat:hover {
-            border-color: var(--deep-link-blue);
+        .player-svg-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 150ms ease;
         }
 
-        .player-card-flat-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 13px;
+        .player-card-flat:hover .player-svg-wrapper {
+            transform: scale(1.08);
+        }
+
+        .player-figure {
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+        }
+
+        /* Badge overlays */
+        .badge-role {
+            position: absolute;
+            top: 0px;
+            right: -2px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 800;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            border: 1px solid var(--absolute-white);
+        }
+
+        .badge-role.c {
+            background-color: var(--accent-gold);
+            color: var(--absolute-black);
+        }
+
+        .badge-role.v {
+            background-color: #868e96;
+            color: var(--absolute-white);
+        }
+
+        /* Card Name & Price Pill Chip */
+        .player-pill-chip {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 4px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 6px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            width: 100%;
+            max-width: 110px;
+            transition: background-color 200ms ease, border-color 200ms ease;
+        }
+
+        .player-card-flat:hover .player-pill-chip {
+            border-color: var(--brand-blue);
+        }
+
+        .player-pill-name {
+            font-size: 11px;
             font-weight: 700;
             color: var(--text-primary);
-            text-align: center;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 100px;
+            width: 100%;
         }
 
-        .player-card-flat-team {
-            font-family: 'Space Mono', monospace;
+        .player-pill-details {
             font-size: 9px;
+            font-weight: 600;
             color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
+            margin-top: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
         }
 
-        .player-card-flat-pts {
-            background-color: var(--jelly-mint);
-            color: var(--absolute-black);
-            font-family: 'Space Mono', monospace;
-            font-size: 9px;
-            font-weight: 700;
-            border-radius: 10px;
-            padding: 2px 8px;
-            margin-top: 4px;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
-        }
-
-        .player-card-flat:hover .player-card-flat-pts {
-            background-color: var(--deep-link-blue);
-            color: var(--text-primary);
-        }
-
-        /* Captain & Priority Targets (Full Bleed shapes with absolute black text) */
-        .player-card-flat.captain {
-            background-color: var(--jelly-mint);
-            border-color: var(--jelly-mint);
-        }
-
-        .player-card-flat.captain .player-card-flat-name,
-        .player-card-flat.captain .player-card-flat-team {
-            color: var(--absolute-black);
-        }
-
-        .player-card-flat.captain .player-card-flat-pts {
-            background-color: var(--absolute-black);
-            color: var(--jelly-mint);
-        }
-
-        .player-card-flat.priority-target {
-            background-color: var(--verge-ultraviolet);
-            border-color: var(--verge-ultraviolet);
-        }
-
-        .player-card-flat.priority-target .player-card-flat-name,
-        .player-card-flat.priority-target .player-card-flat-team {
-            color: var(--text-primary);
-        }
-
-        .player-card-flat.priority-target .player-card-flat-pts {
-            background-color: var(--jelly-mint);
-            color: var(--absolute-black);
-        }
-
-        /* Bounded Bench Panel (Reserve Assets) */
+        /* BENCH TRAY */
         .bench-panel {
-            background-color: var(--surface-slate);
-            border: 1px solid var(--image-frame);
-            border-radius: 24px;
-            padding: 32px;
-            margin-top: 24px;
+            background-color: var(--bg-bench);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+            transition: background-color 200ms ease;
         }
 
         .bench-header {
-            font-family: 'Space Mono', monospace;
             font-size: 11px;
+            font-weight: 700;
             color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 1.8px;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
         }
 
         .bench-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
+            gap: 12px;
         }
 
         @media (max-width: 600px) {
             .bench-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr) !important;
             }
         }
 
-        /* Right Column: StoryStream Rail Timeline */
+        /* 8. STORYSTREAM PANEL */
         .story-stream-panel {
-            position: relative;
-            padding-left: 24px;
-        }
-
-        /* Rule Spine Spine */
-        .story-stream-panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 1px;
-            background-color: var(--verge-ultraviolet);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: background-color 200ms ease, border-color 200ms ease;
+            max-height: 750px;
+            overflow-y: auto;
         }
 
         .story-stream-header {
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding-left: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .story-stream-feed {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
         }
 
         .story-card {
-            background-color: var(--surface-slate);
-            border: 1px solid var(--image-frame);
-            border-radius: 20px;
-            padding: 16px 20px;
-            position: relative;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 14px;
             transition: border-color 150ms ease;
         }
 
-        /* Pinned indicator node on spine */
-        .story-card::before {
-            content: '';
-            position: absolute;
-            left: -29px;
-            top: 22px;
-            width: 9px;
-            height: 9px;
-            background-color: var(--verge-ultraviolet);
-            border: 1px solid var(--jelly-mint);
-            border-radius: 50%;
-        }
-
         .story-card:hover {
-            border-color: var(--deep-link-blue);
+            border-color: var(--brand-blue);
         }
 
         .story-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .story-timestamp {
-            font-family: 'Space Mono', monospace;
             font-size: 10px;
             color: var(--text-secondary);
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
+            font-weight: 500;
         }
 
         .story-tag {
-            background-color: var(--verge-ultraviolet);
-            color: var(--text-primary);
-            font-family: 'Space Mono', monospace;
             font-size: 9px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
-            border-radius: 20px;
-            padding: 2px 8px;
+            border-radius: 4px;
+            padding: 1px 6px;
         }
 
         .story-text {
-            font-size: 14px;
+            font-size: 12.5px;
             line-height: 1.4;
             color: var(--text-primary);
         }
 
-        /* 5. HOMEPAGE VIEW: saturated color-block panels */
+        /* 9. HOME VIEW ACCENTS */
         .homepage-layout {
             display: grid;
             grid-template-columns: 8fr 4fr;
-            gap: 32px;
+            gap: 24px;
         }
 
         @media (max-width: 900px) {
@@ -566,20 +598,22 @@
         }
 
         .league-tile {
-            border-radius: 24px;
-            padding: 28px;
+            border-radius: 16px;
+            padding: 24px;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 250px;
-            transition: border-color 150ms ease, color 150ms ease;
+            min-height: 220px;
+            transition: transform 150ms ease, box-shadow 150ms ease;
             cursor: pointer;
-            border: 1px solid transparent;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
         }
 
         .league-tile:hover {
-            border-color: var(--deep-link-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
         .league-tile-header {
@@ -589,100 +623,101 @@
         }
 
         .league-tile-kicker {
-            font-family: 'Space Mono', monospace;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
+            letter-spacing: 0.8px;
         }
 
         .league-tile-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 36px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
             font-weight: 900;
             text-transform: uppercase;
-            line-height: 0.95;
-            margin-top: 8px;
+            line-height: 1.0;
+            margin-top: 6px;
         }
 
         .league-tile-stats {
-            margin-top: 24px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            padding-top: 16px;
+            margin-top: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            padding-top: 12px;
         }
 
         .league-tile-stat-row {
             display: flex;
             justify-content: space-between;
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            margin-bottom: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 2px;
         }
 
-        /* Tile Color block registers */
-        .tile-mint { background-color: var(--jelly-mint); color: var(--absolute-black); }
-        .tile-mint .league-tile-kicker { color: rgba(0,0,0,0.6); }
-        .tile-mint .league-tile-stats { border-top-color: rgba(0,0,0,0.15); }
+        /* Color block themes for tiles */
+        .tile-mint { background-color: #e6fcf5; color: #0ca678; border-color: #c3fae8; }
+        .tile-mint .league-tile-kicker { color: #099268; }
+        .tile-white { background-color: #ffffff; color: #1a1a1a; border-color: #dee2e6; }
+        .tile-white .league-tile-kicker { color: #495057; }
+        .tile-yellow { background-color: #fff9db; color: #f08c00; border-color: #fff3bf; }
+        .tile-yellow .league-tile-kicker { color: #e67e22; }
+        .tile-pink { background-color: #fff0f6; color: #d6336c; border-color: #fcc2d7; }
+        .tile-pink .league-tile-kicker { color: #c2255c; }
+        .tile-orange { background-color: #fff4e6; color: #f76707; border-color: #ffe8cc; }
+        .tile-orange .league-tile-kicker { color: #d9480f; }
+        .tile-purple { background-color: #f3f0ff; color: #7048e8; border-color: #dbe4ff; }
+        .tile-purple .league-tile-kicker { color: #5f3dc4; }
 
-        .tile-white { background-color: var(--hazard-white); color: var(--absolute-black); }
-        .tile-white .league-tile-kicker { color: rgba(0,0,0,0.6); }
-        .tile-white .league-tile-stats { border-top-color: rgba(0,0,0,0.15); }
+        body.dark .league-tile {
+            background-color: var(--bg-card) !important;
+            color: var(--text-primary) !important;
+            border-color: var(--border-color) !important;
+        }
+        body.dark .league-tile-kicker {
+            color: var(--text-secondary) !important;
+        }
+        body.dark .league-tile-stats {
+            border-top-color: var(--border-color) !important;
+        }
 
-        .tile-yellow { background-color: #ffee00; color: var(--absolute-black); }
-        .tile-yellow .league-tile-kicker { color: rgba(0,0,0,0.6); }
-        .tile-yellow .league-tile-stats { border-top-color: rgba(0,0,0,0.15); }
-
-        .tile-pink { background-color: #ff007f; color: var(--text-primary); }
-        .tile-pink .league-tile-kicker { color: rgba(255,255,255,0.6); }
-        .tile-pink .league-tile-stats { border-top-color: rgba(255,255,255,0.2); }
-
-        .tile-orange { background-color: #ff6600; color: var(--text-primary); }
-        .tile-orange .league-tile-kicker { color: rgba(255,255,255,0.6); }
-        .tile-orange .league-tile-stats { border-top-color: rgba(255,255,255,0.2); }
-
-        .tile-purple { background-color: var(--verge-ultraviolet); color: var(--text-primary); }
-        .tile-purple .league-tile-kicker { color: rgba(255,255,255,0.6); }
-        .tile-purple .league-tile-stats { border-top-color: rgba(255,255,255,0.2); }
-
-        /* 6. PLAYER TABLE ARRAY */
+        /* 10. PLAYER TABLES */
         .table-container {
-            margin-top: 32px;
-            border: 1px solid var(--image-frame);
-            border-radius: 20px;
+            margin-top: 24px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: var(--shadow);
+            background-color: var(--bg-card);
+            transition: background-color 200ms ease, border-color 200ms ease;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 14px;
+            font-size: 13.5px;
         }
 
         th {
-            background-color: var(--canvas-black);
-            border-bottom: 1px solid var(--image-frame);
+            background-color: var(--bg-card);
+            border-bottom: 1.5px solid var(--border-color);
             color: var(--text-secondary);
-            font-family: 'Space Mono', monospace;
             font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
-            padding: 14px 16px;
+            letter-spacing: 0.8px;
+            padding: 12px 16px;
         }
 
         td {
-            background-color: var(--canvas-black);
-            border-bottom: 1px solid var(--image-frame);
-            padding: 14px 16px;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 16px;
             color: var(--text-primary);
-            transition: color 150ms ease;
+            transition: background-color 150ms ease, color 150ms ease;
         }
 
         tr:hover td {
-            color: var(--deep-link-blue);
+            background-color: var(--bg-bench);
+            color: var(--brand-blue);
         }
 
         tr:last-child td {
@@ -694,35 +729,34 @@
         }
 
         .td-tag {
-            background-color: var(--surface-slate);
+            background-color: var(--bg-bench);
             color: var(--text-primary);
-            font-family: 'Space Mono', monospace;
             font-size: 9px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
             border-radius: 4px;
             padding: 2px 6px;
         }
 
         .td-tag.tag-starter {
-            background-color: var(--jelly-mint);
-            color: var(--absolute-black);
-            font-weight: 700;
+            background-color: #2b8a3e;
+            color: var(--absolute-white);
+        }
+
+        body.dark .td-tag.tag-starter {
+            background-color: #0ca678;
         }
 
         .td-pts {
-            color: var(--jelly-mint);
-            font-family: 'Space Mono', monospace;
+            color: var(--text-brand);
             font-weight: 700;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
         }
 
-        /* 7. PLAYER STATS DETAILS MODAL */
+        /* 11. STATS DETAILS MODAL */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(0, 0, 0, 0.7);
             display: none;
             justify-content: center;
             align-items: center;
@@ -731,130 +765,224 @@
         }
 
         .modal-card {
-            background-color: var(--surface-slate);
-            border: 1px solid var(--jelly-mint);
-            border-radius: 24px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             width: 100%;
-            max-width: 500px;
-            padding: 32px;
+            max-width: 480px;
+            padding: 28px;
             position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: background-color 200ms ease, border-color 200ms ease;
         }
 
         .modal-close {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 16px;
+            right: 16px;
             background: none;
             border: none;
             color: var(--text-secondary);
-            font-size: 24px;
+            font-size: 22px;
             cursor: pointer;
             transition: color 150ms ease;
         }
 
         .modal-close:hover {
-            color: var(--jelly-mint);
+            color: var(--text-brand);
         }
 
         .modal-header h3 {
-            font-size: 28px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
             font-weight: 700;
             color: var(--text-primary);
         }
 
         .modal-header p {
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
+            font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
-            color: var(--jelly-mint);
+            letter-spacing: 0.8px;
+            color: var(--text-brand);
             margin-top: 4px;
         }
 
         .modal-stats {
-            margin-top: 24px;
+            margin-top: 20px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 12px;
         }
 
         .modal-stat-box {
-            background-color: var(--canvas-black);
-            border: 1px solid var(--image-frame);
-            border-radius: 12px;
+            background-color: var(--bg-bench);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             padding: 12px;
             text-align: center;
+            transition: background-color 200ms ease, border-color 200ms ease;
         }
 
         .modal-stat-label {
-            font-family: 'Space Mono', monospace;
-            font-size: 10px;
+            font-size: 9px;
+            font-weight: 700;
             color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 1.8px;
+            letter-spacing: 0.8px;
         }
 
         .modal-stat-val {
-            font-family: 'Space Mono', monospace;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--text-primary);
             margin-top: 4px;
-            letter-spacing: 1.8px;
+        }
+
+        /* 12. PITCH TOP FILTER STAT BOXES */
+        .custom-stat-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 16px 18px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+            max-width: 180px;
+            min-width: 130px;
+            transition: background-color 350ms ease, transform 350ms ease, border-color 350ms ease;
+            box-shadow: var(--shadow);
+        }
+
+        .custom-stat-box .stat-box-label {
+            font-size: 10px;
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #8b8f97;
+            transition: color 350ms ease;
+            z-index: 2;
+        }
+
+        .custom-stat-box .stat-box-value {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-primary);
+            transition: color 350ms ease;
+            z-index: 2;
+        }
+
+        /* Hover & Lift */
+        .custom-stat-box:hover {
+            background-color: var(--text-brand) !important;
+            border-color: var(--text-brand) !important;
+            transform: translateY(-2px);
+        }
+
+        .custom-stat-box:hover .stat-box-label,
+        .custom-stat-box:hover .stat-box-value {
+            color: #101114 !important;
+        }
+
+        /* Diagonal glitter/shine sweep */
+        .custom-stat-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-20deg);
+            z-index: 3;
+        }
+
+        .custom-stat-box:hover::after {
+            left: 150%;
+            transition: left 650ms ease-out;
         }
 
         /* Footer */
         footer {
-            max-width: 1300px;
-            margin: 80px auto 40px auto;
-            border-top: 1px solid var(--image-frame);
-            padding: 24px;
+            max-width: 1200px;
+            margin: 60px auto 20px auto;
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
             text-align: center;
-            font-family: 'Space Mono', monospace;
             font-size: 11px;
             color: var(--text-secondary);
+            font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 1.8px;
+            letter-spacing: 0.8px;
         }
     </style>
 </head>
-<body>
+<body class="dark">
 
-    <!-- GLOBAL MASTHEAD NAVIGATION BAR -->
+    <!-- HEADER -->
     <header>
         <div class="masthead-container">
             <a onclick="switchView('home')" class="brand-logo">
                 THE PREDICTOR <span>MATRIX</span>
             </a>
-            <ul class="nav-links">
-                <li><a class="nav-link active" id="tab-home" onclick="switchView('home')">[HOME]</a></li>
-                <li><a class="nav-link" id="tab-epl" onclick="switchView('epl')">[PREMIER LEAGUE]</a></li>
-                <li><a class="nav-link" id="tab-la_liga" onclick="switchView('la_liga')">[LA LIGA]</a></li>
-                <li><a class="nav-link" id="tab-serie_a" onclick="switchView('serie_a')">[SERIE A]</a></li>
-                <li><a class="nav-link" id="tab-bundesliga" onclick="switchView('bundesliga')">[BUNDESLIGA]</a></li>
-                <li><a class="nav-link" id="tab-ligue_1" onclick="switchView('ligue_1')">[LIGUE 1]</a></li>
-                <li><a class="nav-link" id="tab-world_cup" onclick="switchView('world_cup')">[WORLD CUP]</a></li>
-            </ul>
+            <div class="header-actions">
+                <select id="competition-select" class="nav-select" onchange="switchView(this.value)">
+                    <option value="home">Dashboard Home</option>
+                    <option value="world_cup">World Cup 2026</option>
+                    <option value="epl">Premier League</option>
+                    <option value="la_liga">La Liga</option>
+                    <option value="serie_a">Serie A</option>
+                    <option value="bundesliga">Bundesliga</option>
+                    <option value="ligue_1">Ligue 1</option>
+                </select>
+                <button id="theme-toggle-btn" class="theme-btn" onclick="toggleTheme()" aria-label="Toggle light/dark theme"></button>
+            </div>
         </div>
     </header>
 
-    <!-- BANNER SHOUT -->
-    <div style="max-width: 1300px; margin: 40px auto 10px auto; padding: 0 24px;">
-        <div class="whisper-text" id="hero-kicker" style="color: var(--jelly-mint); font-size: 13px; margin-bottom: 6px;">GLOBAL PREDICTOR MATRIX</div>
-        <h1 class="shout-title" id="hero-title" style="font-size: clamp(48px, 8vw, 107px);">FANTASY MATRIX</h1>
-    </div>
-
-    <!-- MAIN DYNAMIC ROUTER PANEL -->
+    <!-- MAIN GRID ROUTER -->
     <main>
+        <!-- STAT STRIP -->
+        <div class="stat-strip" id="stat-strip-container" style="display: none;">
+            <div class="stat-card">
+                <div class="stat-label">Projected Points</div>
+                <div class="stat-val" id="opt-points-proj">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Team Value</div>
+                <div class="stat-val" id="opt-team-value">--</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">In the Bank</div>
+                <div class="stat-val" id="opt-bank-value">--</div>
+            </div>
+            <div class="stat-card stepper-card">
+                <div class="stat-label" id="stepper-label">Gameweek</div>
+                <div class="stepper-controls">
+                    <button class="stepper-btn" id="stepper-prev" onclick="stepPrev()">&lt;</button>
+                    <span class="stepper-val-text" id="stepper-value">Gameweek 1</span>
+                    <button class="stepper-btn" id="stepper-next" onclick="stepNext()">&gt;</button>
+                </div>
+            </div>
+        </div>
+
         <div id="view-content">
-            <!-- Router content injected dynamically -->
+            <!-- Dynamic view injected here -->
         </div>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        THE VERGE REDESIGN INSPIRATION // MILP 15-PLAYER SOLVER ENGINE 2026.07.02
+        Fantasy Football Predictor Engine // MILP Optimization Solver 2026
     </footer>
 
     <!-- STATS DETAILS MODAL -->
@@ -886,48 +1014,236 @@
         </div>
     </div>
 
-    <!-- PRE-CALCULATED FALLBACK DATA -->
+    <!-- Static fallback data source -->
     <script src="data/dashboard_data.js"></script>
     <script>
         let currentView = 'home';
         let currentFormation = '4-3-3';
-        let currentBudget = '80';
+        let currentBudget = '100';
+        let currentStageIndex = 0;
 
+        const wcStages = [
+            "Round 1", "Round 2", "Round 3", "Round of 32", "Round of 16", "Quarter-final", "Semi-final", "Final"
+        ];
+
+        // 1. Theme Logic
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const themeBtn = document.getElementById('theme-toggle-btn');
+            if (!themeBtn) return;
+            if (document.body.classList.contains('dark')) {
+                // Show sun in dark mode to switch to light
+                themeBtn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                `;
+            } else {
+                // Show moon in light mode to switch to dark
+                themeBtn.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                `;
+            }
+        }
+
+        // 2. Stepper Stages Helper
+        function getStagesForView(viewId) {
+            if (viewId === 'world_cup') {
+                return wcStages;
+            } else if (['epl', 'la_liga', 'serie_a'].includes(viewId)) {
+                return Array.from({length: 38}, (_, i) => `Gameweek ${i + 1}`);
+            } else if (['bundesliga', 'ligue_1'].includes(viewId)) {
+                return Array.from({length: 34}, (_, i) => `Gameweek ${i + 1}`);
+            }
+            return [];
+        }
+
+        function updateStepperUI() {
+            const stepperCard = document.querySelector('.stepper-card');
+            const stepperLabel = document.getElementById('stepper-label');
+            const stepperValue = document.getElementById('stepper-value');
+            const prevBtn = document.getElementById('stepper-prev');
+            const nextBtn = document.getElementById('stepper-next');
+            const stripContainer = document.getElementById('stat-strip-container');
+            
+            if (!stepperCard || !stepperLabel || !stepperValue || !prevBtn || !nextBtn || !stripContainer) return;
+            
+            if (currentView === 'home') {
+                stepperCard.style.display = 'none';
+                stripContainer.style.gridTemplateColumns = 'repeat(3, 1fr)';
+                return;
+            }
+            
+            stepperCard.style.display = 'flex';
+            stripContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+            
+            const stages = getStagesForView(currentView);
+            const isWc = currentView === 'world_cup';
+            
+            stepperLabel.innerText = isWc ? 'Round' : 'Gameweek';
+            stepperValue.innerText = stages[currentStageIndex] || '';
+            
+            prevBtn.disabled = currentStageIndex === 0;
+            nextBtn.disabled = currentStageIndex === stages.length - 1;
+        }
+
+        function stepPrev() {
+            if (currentStageIndex > 0) {
+                currentStageIndex--;
+                updateStepperUI();
+            }
+        }
+
+        function stepNext() {
+            const stages = getStagesForView(currentView);
+            if (currentStageIndex < stages.length - 1) {
+                currentStageIndex++;
+                updateStepperUI();
+            }
+        }
+
+        // 3. Dynamic Kit colors helper
+        function getKitColors(teamName, position) {
+            if (position === 'Goalkeeper') {
+                return { jersey: '#1e293b', collar: '#f1f5f9', text: '#ffd700' }; // Black/Gold
+            }
+            
+            const name = teamName.toLowerCase();
+            if (name.includes('argentina')) return { jersey: '#75aadb', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('france')) return { jersey: '#0f2042', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('belgium') || name.includes('spain')) return { jersey: '#e30613', collar: '#fedf00', text: '#fedf00' };
+            if (name.includes('netherlands')) return { jersey: '#f15a24', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('brazil')) return { jersey: '#fedf00', collar: '#009b3a', text: '#009b3a' };
+            if (name.includes('england') || name.includes('germany')) return { jersey: '#ffffff', collar: '#0a192f', text: '#0a192f' };
+            if (name.includes('portugal')) return { jersey: '#a6051a', collar: '#046a38', text: '#ffffff' };
+            if (name.includes('italy')) return { jersey: '#004b87', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('colombia')) return { jersey: '#fdd100', collar: '#003893', text: '#003893' };
+            if (name.includes('norway')) return { jersey: '#d61a3c', collar: '#00205b', text: '#ffffff' };
+            if (name.includes('egypt')) return { jersey: '#c1272d', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('canada')) return { jersey: '#ff0000', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('usa') || name.includes('united states')) return { jersey: '#ffffff', collar: '#002868', text: '#002868' };
+            if (name.includes('ghana')) return { jersey: '#ffffff', collar: '#ffd700', text: '#ffd700' };
+            if (name.includes('cape verde')) return { jersey: '#002a8f', collar: '#ffd700', text: '#ffffff' };
+            if (name.includes('australia')) return { jersey: '#ffd700', collar: '#008a4b', text: '#008a4b' };
+            if (name.includes('paraguay')) return { jersey: '#d11919', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('mexico')) return { jersey: '#006847', collar: '#ffffff', text: '#ffffff' };
+            if (name.includes('morocco')) return { jersey: '#c1272d', collar: '#006233', text: '#ffffff' };
+            
+            // Club kits
+            if (name.includes('arsenal') || name.includes('liverpool') || name.includes('manchester utd') || name.includes('man utd') || name.includes('bayern')) {
+                return { jersey: '#c8102e', collar: '#ffffff', text: '#ffffff' };
+            }
+            if (name.includes('chelsea') || name.includes('everton')) {
+                return { jersey: '#034694', collar: '#ffffff', text: '#ffffff' };
+            }
+            if (name.includes('man city') || name.includes('lazio')) {
+                return { jersey: '#6cabdd', collar: '#ffffff', text: '#ffffff' };
+            }
+            if (name.includes('tottenham') || name.includes('real madrid')) {
+                return { jersey: '#ffffff', collar: '#132257', text: '#132257' };
+            }
+            if (name.includes('barcelona')) {
+                return { jersey: '#004d98', collar: '#a50044', text: '#a50044' };
+            }
+            if (name.includes('dortmund')) {
+                return { jersey: '#fde100', collar: '#000000', text: '#000000' };
+            }
+            if (name.includes('psg')) {
+                return { jersey: '#0052b4', collar: '#e30613', text: '#ffffff' };
+            }
+            
+            return { jersey: '#5c7cfa', collar: '#ffffff', text: '#ffffff' };
+        }
+
+        function getTeamCode(teamName) {
+            const name = teamName.toLowerCase();
+            if (name.includes('argentina')) return 'ARG';
+            if (name.includes('france')) return 'FRA';
+            if (name.includes('belgium')) return 'BEL';
+            if (name.includes('spain')) return 'ESP';
+            if (name.includes('netherlands')) return 'NED';
+            if (name.includes('brazil')) return 'BRA';
+            if (name.includes('england')) return 'ENG';
+            if (name.includes('germany')) return 'GER';
+            if (name.includes('portugal')) return 'POR';
+            if (name.includes('italy')) return 'ITA';
+            if (name.includes('colombia')) return 'COL';
+            if (name.includes('norway')) return 'NOR';
+            if (name.includes('egypt')) return 'EGY';
+            if (name.includes('morocco')) return 'MAR';
+            if (name.includes('cape verde')) return 'CPV';
+            if (name.includes('ghana')) return 'GHA';
+            if (name.includes('australia')) return 'AUS';
+            if (name.includes('paraguay')) return 'PAR';
+            if (name.includes('mexico')) return 'MEX';
+            if (name.includes('canada')) return 'CAN';
+            
+            if (name.includes('arsenal')) return 'ARS';
+            if (name.includes('aston villa')) return 'AVL';
+            if (name.includes('chelsea')) return 'CHE';
+            if (name.includes('liverpool')) return 'LIV';
+            if (name.includes('man city') || name.includes('manchester city')) return 'MCI';
+            if (name.includes('man utd') || name.includes('manchester utd')) return 'MUN';
+            if (name.includes('tottenham') || name.includes('spurs')) return 'TOT';
+            if (name.includes('real madrid')) return 'RMA';
+            if (name.includes('barcelona')) return 'FCB';
+            if (name.includes('atletico')) return 'ATM';
+            if (name.includes('bayern')) return 'FCB';
+            if (name.includes('dortmund')) return 'BVB';
+            if (name.includes('psg') || name.includes('paris')) return 'PSG';
+            
+            return teamName.substring(0, 3).toUpperCase();
+        }
+
+        function getShirtNumber(name) {
+            let hash = 0;
+            for (let i = 0; i < name.length; i++) {
+                hash = name.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            return Math.abs(hash % 99) + 1;
+        }
+
+        // 4. Global Switch View router
         function switchView(viewId) {
             currentView = viewId;
+            currentStageIndex = 0;
             
-            // Toggle active state in navigation
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            const activeTab = document.getElementById(`tab-${viewId}`);
-            if (activeTab) activeTab.classList.add('active');
+            // Sync nav dropdown value
+            const select = document.getElementById('competition-select');
+            if (select) select.value = viewId;
 
-            const kicker = document.getElementById('hero-kicker');
-            const title = document.getElementById('hero-title');
-            
             // Default budgets
-            currentBudget = (viewId === 'world_cup') ? '105' : '80';
+            currentBudget = (viewId === 'world_cup') ? '105' : '100';
 
             if (viewId === 'home') {
-                kicker.innerText = 'GLOBAL PREDICTOR MATRIX';
-                title.innerText = 'FANTASY MATRIX';
                 renderHomeView();
             } else {
                 const data = dashboardData[viewId];
                 if (!data) return;
-                kicker.innerText = `${data.title.toUpperCase()} ZONE ENGINE`;
-                title.innerText = data.title.toUpperCase();
                 renderLeagueView(viewId, data);
             }
             
-            // Update optimal 15-player squad from API
+            updateStepperUI();
             updateOptimalRoster();
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // TRIGGER MILP SOLVER API
+        // 5. Trigger optimal solver API fetch
         function updateOptimalRoster() {
             const gkRow = document.getElementById('pitch-gk');
             const defRow = document.getElementById('pitch-def');
@@ -935,7 +1251,7 @@
             const fwdRow = document.getElementById('pitch-fwd');
             const benchContainer = document.getElementById('bench-container');
             
-            if (gkRow) gkRow.innerHTML = '<span class="whisper-text" style="color: var(--jelly-mint);">RESOLVING SQUAD SOLVER...</span>';
+            if (gkRow) gkRow.innerHTML = '<span style="font-size:12px; font-weight:600; color:var(--text-secondary);">Resolving squad MILP...</span>';
             if (defRow) defRow.innerHTML = '';
             if (midRow) midRow.innerHTML = '';
             if (fwdRow) fwdRow.innerHTML = '';
@@ -949,27 +1265,17 @@
                     return response.json();
                 })
                 .then(data => {
-                    // Render Starting XI on pitch
                     renderPitchPlayers(data.starting_xi);
-                    
-                    // Render Bench Panel
                     renderBenchPlayers(data.bench);
+                    updateMetaStats(data.expectedPoints, data.budgetUsed);
                     
-                    // Update meta indicators
-                    const budgetIndicator = document.getElementById('opt-budget-used');
-                    const pointsIndicator = document.getElementById('opt-points-proj');
-                    if (budgetIndicator) budgetIndicator.innerText = `Budget: ${data.budgetUsed}`;
-                    if (pointsIndicator) pointsIndicator.innerText = data.expectedPoints;
-                    
-                    // Update Table
                     const tableBody = document.getElementById('league-table-body');
                     if (tableBody) {
                         tableBody.innerHTML = '';
-                        // Starters
                         data.starting_xi.forEach(p => {
                             tableBody.innerHTML += `
                             <tr onclick='openPlayerModal(${JSON.stringify(p)})' style="cursor:pointer;">
-                                <td class="td-name">${p.name}</td>
+                                <td class="td-name">${p.name.replace(' (C)', '').replace(' (VC)', '')}</td>
                                 <td>${p.team}</td>
                                 <td><span class="td-tag tag-starter">STARTER (${p.position.substring(0, 3).toUpperCase()})</span></td>
                                 <td>${p.cost}</td>
@@ -977,11 +1283,10 @@
                             </tr>
                             `;
                         });
-                        // Bench
                         data.bench.forEach(p => {
                             tableBody.innerHTML += `
                             <tr onclick='openPlayerModal(${JSON.stringify(p)})' style="cursor:pointer;">
-                                <td class="td-name">${p.name}</td>
+                                <td class="td-name">${p.name.replace(' (C)', '').replace(' (VC)', '')}</td>
                                 <td>${p.team}</td>
                                 <td><span class="td-tag">BENCH (${p.position.substring(0, 3).toUpperCase()})</span></td>
                                 <td>${p.cost}</td>
@@ -993,78 +1298,89 @@
                 })
                 .catch(err => {
                     console.log('API fallback triggered due to error:', err);
-                    // Use static fallback pre-built list
                     const fallbackData = dashboardData[currentView];
                     if (!fallbackData) return;
                     
-                    // For static, slice top 11 as starters, remaining 4 as bench
                     const startingXI = fallbackData.players.slice(0, 11);
                     const bench = fallbackData.players.slice(11, 15);
                     
                     renderPitchPlayers(startingXI);
                     renderBenchPlayers(bench);
-                    
-                    const budgetIndicator = document.getElementById('opt-budget-used');
-                    const pointsIndicator = document.getElementById('opt-points-proj');
-                    if (budgetIndicator) budgetIndicator.innerText = `Budget: ${fallbackData.budgetUsed}`;
-                    if (pointsIndicator) pointsIndicator.innerText = fallbackData.expectedPoints;
+                    updateMetaStats(fallbackData.expectedPoints, fallbackData.budgetUsed);
                 });
         }
 
-        // VIEW 1: RENDER HOMEPAGE
+        // Helper: split/extract Team Value & In Bank from the combined budget string
+        function updateMetaStats(points, budgetStr) {
+            const pointsIndicator = document.getElementById('opt-points-proj');
+            const teamValueIndicator = document.getElementById('opt-team-value');
+            const bankIndicator = document.getElementById('opt-bank-value');
+            
+            const pitchPoints = document.getElementById('val-projected-points');
+            const pitchBudgetUsed = document.getElementById('val-budget-used');
+            
+            const ptsText = points.includes('PTS') ? points : `${points} PTS`;
+            if (pointsIndicator) pointsIndicator.innerText = ptsText;
+            if (pitchPoints) pitchPoints.innerText = ptsText;
+            
+            if (!budgetStr) return;
+            const parts = budgetStr.split('/');
+            let teamVal = parts[0].trim();
+            let limit = parts[1] ? parseFloat(parts[1].replace('£','').replace('m','').trim()) : 80.0;
+            let used = parseFloat(parts[0].replace('£','').replace('m','').trim());
+            let bank = (limit - used).toFixed(1);
+            
+            if (teamValueIndicator) teamValueIndicator.innerText = teamVal;
+            if (pitchBudgetUsed) pitchBudgetUsed.innerText = teamVal;
+            if (bankIndicator) bankIndicator.innerText = `£${bank}m`;
+        }
+
+        // RENDER 1: HOMEPAGE VIEW
         function renderHomeView() {
             const container = document.getElementById('view-content');
             
             let html = `
             <div class="homepage-layout">
-                <!-- Left columns (Optimal Global XI) -->
+                <!-- Left Column -->
                 <div>
                     <div class="pitch-card">
                         <div class="pitch-header">
                             <div class="pitch-title-cluster">
                                 <h2>Global Dream XI</h2>
-                                <p>Optimal 15-player squad selected across all leagues</p>
-                            </div>
-                            <div class="pitch-meta">
-                                <div class="meta-stat-pill" id="opt-budget-used">Budget: --</div>
-                                <div class="meta-stat-pill" id="opt-points-proj">-- PTS</div>
+                                <p>Optimal 15-player squad computed across all leagues</p>
                             </div>
                         </div>
                         
                         <!-- Tactical Pitch Layout -->
                         <div class="pitch-canvas">
+                            <div class="pitch-goal-net"></div>
                             <div class="pitch-line-center"></div>
                             <div class="pitch-circle-center"></div>
                             <div class="pitch-box-penalty-top"></div>
                             <div class="pitch-box-penalty-bottom"></div>
                             
-                            <!-- Forwards Row -->
+                            <!-- Rows -->
                             <div class="pitch-row" id="pitch-fwd"></div>
-                            <!-- Midfielders Row -->
                             <div class="pitch-row" id="pitch-mid"></div>
-                            <!-- Defenders Row -->
                             <div class="pitch-row" id="pitch-def"></div>
-                            <!-- Goalkeeper Row -->
                             <div class="pitch-row" id="pitch-gk"></div>
                         </div>
 
                         <!-- Bench Panel -->
                         <div class="bench-panel">
-                            <div class="bench-header">RESERVES // BENCH</div>
+                            <div class="bench-header">RESERVE BENCH</div>
                             <div class="bench-grid" id="bench-container"></div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Right column (Global StoryStream alerts with Purple Spine) -->
+                <!-- Right Column -->
                 <div class="story-stream-panel">
-                    <div class="story-stream-header">ALGORITHM LOGS // STREAM</div>
+                    <div class="story-stream-header">ALGORITHM LOG FEED</div>
                     <div class="story-stream-feed" id="home-stream"></div>
                 </div>
             </div>
             
-            <!-- Saturated League Accent Grid -->
-            <div class="whisper-text" style="margin-top: 40px; color: var(--text-secondary); font-size: 12px;">SELECT A ZONE FOR TACTICAL FILTERS</div>
             <div class="league-grid">
                 <div class="league-tile tile-mint" onclick="switchView('epl')">
                     <div class="league-tile-header">
@@ -1142,105 +1458,96 @@
             
             container.innerHTML = html;
 
-            // Render Global Stream
             const streamContainer = document.getElementById('home-stream');
-            dashboardData.home.stories.forEach(s => {
-                streamContainer.innerHTML += `
-                <div class="story-card">
-                    <div class="story-meta">
-                        <span class="story-timestamp">${s.time}</span>
-                        <span class="story-tag">${s.tag}</span>
+            if (streamContainer) {
+                dashboardData.home.stories.forEach(s => {
+                    streamContainer.innerHTML += `
+                    <div class="story-card">
+                        <div class="story-meta">
+                            <span class="story-timestamp">${s.time}</span>
+                            <span class="story-tag" style="background-color: var(--text-brand); color: var(--absolute-black);">${s.tag}</span>
+                        </div>
+                        <p class="story-text">${s.text}</p>
                     </div>
-                    <p class="story-text">${s.text}</p>
-                </div>
-                `;
-            });
+                    `;
+                });
+            }
         }
 
-        // VIEWS 2–7: RENDER LEAGUE/TOURNAMENT DASHBOARD
+        // RENDER 2: LEAGUE/TOURNAMENT VIEWS
         function renderLeagueView(viewId, data) {
             const container = document.getElementById('view-content');
             
             let html = `
-            <!-- Form filters row (monospace labels, flat state) -->
-            <div class="filter-row">
-                <div class="filter-group">
-                    <label class="filter-label">Formation</label>
-                    <select class="filter-select" id="filter-formation" onchange="changeFormation(this.value)">
-                        <option value="4-3-3" ${currentFormation === '4-3-3' ? 'selected' : ''}>4-3-3 (Optimal)</option>
-                        <option value="3-5-2" ${currentFormation === '3-5-2' ? 'selected' : ''}>3-5-2</option>
-                        <option value="4-4-2" ${currentFormation === '4-4-2' ? 'selected' : ''}>4-4-2</option>
-                        <option value="5-3-2" ${currentFormation === '5-3-2' ? 'selected' : ''}>5-3-2</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label class="filter-label">Budget Limit</label>
-                    <select class="filter-select" id="filter-budget" onchange="changeBudget(this.value)">
-                        <option value="80" ${currentBudget === '80' ? 'selected' : ''}>£80.0m Base</option>
-                        <option value="90" ${currentBudget === '90' ? 'selected' : ''}>£90.0m Premium</option>
-                        <option value="70" ${currentBudget === '70' ? 'selected' : ''}>£70.0m Budget Tier</option>
+            <div class="filter-row" style="display: flex; gap: 14px; margin-bottom: 20px; flex-wrap: wrap;">
+                <!-- Box 1: Budget Limit Select Overlay -->
+                <div class="custom-stat-box" style="position: relative;">
+                    <div class="stat-box-label">Budget Limit</div>
+                    <div class="stat-box-value" id="val-budget-limit">
+                        ${currentBudget === '105' ? '£105.0m WC Cap' : (currentBudget === '100' ? '£100.0m Base' : (currentBudget === '110' ? '£110.0m Premium' : (currentBudget === '90' ? '£90.0m Budget Tier' : '£' + currentBudget + '.0m')))}
+                    </div>
+                    <select id="filter-budget" onchange="changeBudget(this.value)" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 4;">
+                        <option value="100" ${currentBudget === '100' ? 'selected' : ''}>£100.0m Base</option>
+                        <option value="110" ${currentBudget === '110' ? 'selected' : ''}>£110.0m Premium</option>
+                        <option value="90" ${currentBudget === '90' ? 'selected' : ''}>£90.0m Budget Tier</option>
                         <option value="105" ${currentBudget === '105' ? 'selected' : ''}>£105.0m WC Cap</option>
                     </select>
                 </div>
-                <div class="filter-group">
-                    <label class="filter-label">Horizon</label>
-                    <select class="filter-select" id="filter-horizon">
-                        <option value="1">Next Match (Knockout)</option>
-                        <option value="3">Next 3 Fixtures</option>
-                        <option value="5">Next 5 Fixtures</option>
-                    </select>
+                <!-- Box 2: Budget Used -->
+                <div class="custom-stat-box">
+                    <div class="stat-box-label">Budget Used</div>
+                    <div class="stat-box-value" id="val-budget-used">--</div>
+                </div>
+                <!-- Box 3: Projected Points -->
+                <div class="custom-stat-box">
+                    <div class="stat-box-label">Projected Points</div>
+                    <div class="stat-box-value" id="val-projected-points">--</div>
                 </div>
             </div>
 
             <div class="dashboard-grid">
-                <!-- Left Panel (Dream XI Predictor Engine) -->
+                <!-- Left Panel -->
                 <div>
-                    <div class="pitch-card" style="border-color: ${data.color};">
+                    <div class="pitch-card">
                         <div class="pitch-header">
                             <div class="pitch-title-cluster">
-                                <h2>Dream XI Roster</h2>
-                                <p>Mathematically optimal lineup computed via algorithm solver</p>
-                            </div>
-                            <div class="pitch-meta">
-                                <div class="meta-stat-pill" id="opt-budget-used" style="border-color: ${data.color}; color: ${data.color};">Budget: --</div>
-                                <div class="meta-stat-pill" id="opt-points-proj" style="border-color: ${data.color}; color: ${data.color};">-- PTS</div>
+                                <h2>Dream XI Lineup</h2>
+                                <p>Optimal squad optimized under budget and formation constraints</p>
                             </div>
                         </div>
                         
                         <!-- Tactical Pitch Layout -->
                         <div class="pitch-canvas">
+                            <div class="pitch-goal-net"></div>
                             <div class="pitch-line-center"></div>
                             <div class="pitch-circle-center"></div>
                             <div class="pitch-box-penalty-top"></div>
                             <div class="pitch-box-penalty-bottom"></div>
                             
-                            <!-- Forwards Row -->
+                            <!-- Rows -->
                             <div class="pitch-row" id="pitch-fwd"></div>
-                            <!-- Midfielders Row -->
                             <div class="pitch-row" id="pitch-mid"></div>
-                            <!-- Defenders Row -->
                             <div class="pitch-row" id="pitch-def"></div>
-                            <!-- Goalkeeper Row -->
                             <div class="pitch-row" id="pitch-gk"></div>
                         </div>
 
                         <!-- Bench Panel -->
                         <div class="bench-panel">
-                            <div class="bench-header">RESERVES // BENCH</div>
+                            <div class="bench-header">RESERVE BENCH</div>
                             <div class="bench-grid" id="bench-container"></div>
                         </div>
                     </div>
                     
-                    <!-- Table Array Roster Summary -->
+                    <!-- Squad Data Table -->
                     <div class="table-container">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Player</th>
                                     <th>Club / Nation</th>
-                                    <th>Position</th>
+                                    <th>Status</th>
                                     <th>Price</th>
-                                    <th>Projection</th>
+                                    <th>Proj Score</th>
                                 </tr>
                             </thead>
                             <tbody id="league-table-body"></tbody>
@@ -1248,9 +1555,9 @@
                     </div>
                 </div>
                 
-                <!-- Right Panel (StoryStream feed with rule spine) -->
-                <div class="story-stream-panel" style="border-left-color: ${data.color};">
-                    <div class="story-stream-header" style="color: ${data.color};">${data.title.toUpperCase()} STREAM</div>
+                <!-- Right Panel -->
+                <div class="story-stream-panel">
+                    <div class="story-stream-header" style="color: var(--text-brand);">${data.title.toUpperCase()} NEWS STREAM</div>
                     <div class="story-stream-feed" id="league-stream"></div>
                 </div>
             </div>
@@ -1258,34 +1565,91 @@
             
             container.innerHTML = html;
 
-            // Render Stream Cards
             const streamContainer = document.getElementById('league-stream');
-            data.stories.forEach(s => {
-                streamContainer.innerHTML += `
-                <div class="story-card" style="border-color: var(--image-frame);">
-                    <div class="story-meta">
-                        <span class="story-timestamp">${s.time}</span>
-                        <span class="story-tag" style="background-color: ${data.color}; color: var(--absolute-black);">${s.tag}</span>
+            if (streamContainer) {
+                data.stories.forEach(s => {
+                    streamContainer.innerHTML += `
+                    <div class="story-card">
+                        <div class="story-meta">
+                            <span class="story-timestamp">${s.time}</span>
+                            <span class="story-tag" style="background-color: var(--text-brand); color: var(--absolute-black);">${s.tag}</span>
+                        </div>
+                        <p class="story-text">${s.text}</p>
                     </div>
-                    <p class="story-text">${s.text}</p>
-                </div>
-                `;
-            });
+                    `;
+                });
+            }
         }
 
-        // TRIGGERED FORMATION STATE CHANGE
         function changeFormation(val) {
             currentFormation = val;
             updateOptimalRoster();
         }
 
-        // TRIGGERED BUDGET STATE CHANGE
         function changeBudget(val) {
             currentBudget = val;
+            const textEl = document.getElementById('val-budget-limit');
+            if (textEl) {
+                const names = { '100': '£100.0m Base', '110': '£110.0m Premium', '90': '£90.0m Budget Tier', '105': '£105.0m WC Cap' };
+                textEl.innerText = names[val] || `£${val}.0m`;
+            }
             updateOptimalRoster();
         }
 
-        // HELPER: RENDER STARTERS ON PITCH
+        // 6. SVG Render helpers
+        function generatePlayerCardHtml(p, isBench = false) {
+            const cleanName = p.name.replace(' (C)', '').replace(' (VC)', '');
+            const isCap = p.is_captain || p.name.includes('(C)') || cleanName.includes('Messi') || cleanName.includes('Kane') || cleanName.includes('Haaland');
+            const isVc = p.is_vice_captain || p.name.includes('(VC)') || cleanName.includes('Diaz');
+            const colors = getKitColors(p.team, p.position);
+            const num = getShirtNumber(cleanName);
+            const teamCode = getTeamCode(p.team);
+            
+            // Captain/Vice-Captain Overlay Badge
+            let badgeHtml = '';
+            if (isCap) badgeHtml = `<div class="badge-role c">C</div>`;
+            else if (isVc) badgeHtml = `<div class="badge-role v">V</div>`;
+            
+            // Deterministic price change generator for demonstration
+            let priceChange = p.price_change || p.change;
+            if (priceChange === undefined) {
+                let hash = 0;
+                for (let i = 0; i < p.name.length; i++) {
+                    hash = p.name.charCodeAt(i) + ((hash << 5) - hash);
+                }
+                const ch = Math.abs(hash) % 8;
+                if (ch === 1) priceChange = 0.1;
+                else if (ch === 2) priceChange = -0.1;
+                else priceChange = 0.0;
+            }
+            
+            let arrowHtml = '';
+            if (priceChange > 0) arrowHtml = '<span class="price-change-up" style="color:#0ca678; font-size:8px; font-weight:bold; margin-left:2px;">▲</span>';
+            else if (priceChange < 0) arrowHtml = '<span class="price-change-down" style="color:#f03e3e; font-size:8px; font-weight:bold; margin-left:2px;">▼</span>';
+            
+            return `
+            <div class="player-card-flat" onclick='openPlayerModal(${JSON.stringify(p)})'>
+                <div class="player-svg-wrapper">
+                    <svg class="player-figure" viewBox="0 0 100 100" width="55" height="55" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Head silhouette -->
+                        <circle cx="50" cy="22" r="13" fill="#a0a0a0" />
+                        <!-- Shirt Silhouette -->
+                        <path d="M 22 75 C 22 55, 30 45, 50 45 C 70 45, 78 55, 78 75 L 78 95 L 22 95 Z" fill="${colors.jersey}" />
+                        <!-- Collar line -->
+                        <path d="M 40 45 L 50 56 L 60 45" fill="none" stroke="${colors.collar}" stroke-width="3" />
+                        <!-- Shirt Number -->
+                        <text x="50" y="76" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="${colors.text}" text-anchor="middle" dominant-baseline="middle">${num}</text>
+                    </svg>
+                    ${badgeHtml}
+                </div>
+                <div class="player-pill-chip">
+                    <span class="player-pill-name">${cleanName}</span>
+                    <span class="player-pill-details">${teamCode} · ${p.cost}${arrowHtml}</span>
+                </div>
+            </div>
+            `;
+        }
+
         function renderPitchPlayers(players) {
             const gkRow = document.getElementById('pitch-gk');
             const defRow = document.getElementById('pitch-def');
@@ -1294,61 +1658,38 @@
 
             if (!gkRow) return;
 
-            // Clear rows
             gkRow.innerHTML = '';
             defRow.innerHTML = '';
             midRow.innerHTML = '';
             fwdRow.innerHTML = '';
 
             players.forEach(p => {
-                let badgeClass = 'player-card-flat';
-                // Render Messi/Kane as captains, and other high-value players as priority-target
-                if (p.name.includes('Messi') || p.name.includes('Kane') || p.name.includes('Haaland')) {
-                    badgeClass += ' captain';
-                } else if (parseFloat(p.cost.replace('£','').replace('m','')) >= 8.5) {
-                    badgeClass += ' priority-target';
-                }
-
-                const badgeHtml = `
-                <div class="${badgeClass}" onclick='openPlayerModal(${JSON.stringify(p)})'>
-                    <span class="player-card-flat-name">${p.name}</span>
-                    <span class="player-card-flat-team">${p.team.substring(0, 10)}</span>
-                    <span class="player-card-flat-pts">${p.points}</span>
-                </div>
-                `;
-                
+                const cardHtml = generatePlayerCardHtml(p, false);
                 if (p.position === 'Goalkeeper') {
-                    gkRow.innerHTML += badgeHtml;
+                    gkRow.innerHTML += cardHtml;
                 } else if (p.position === 'Defender') {
-                    defRow.innerHTML += badgeHtml;
+                    defRow.innerHTML += cardHtml;
                 } else if (p.position === 'Midfielder') {
-                    midRow.innerHTML += badgeHtml;
+                    midRow.innerHTML += cardHtml;
                 } else if (p.position === 'Forward') {
-                    fwdRow.innerHTML += badgeHtml;
+                    fwdRow.innerHTML += cardHtml;
                 }
             });
         }
 
-        // HELPER: RENDER BENCH PLAYERS
         function renderBenchPlayers(players) {
             const benchContainer = document.getElementById('bench-container');
             if (!benchContainer) return;
             benchContainer.innerHTML = '';
 
             players.forEach(p => {
-                benchContainer.innerHTML += `
-                <div class="player-card-flat" onclick='openPlayerModal(${JSON.stringify(p)})' style="min-width: 0; width: 100%;">
-                    <span class="player-card-flat-name">${p.name}</span>
-                    <span class="player-card-flat-team">${p.team.substring(0, 10)}</span>
-                    <span class="player-card-flat-pts" style="background-color: var(--image-frame); color: var(--text-primary);">${p.points}</span>
-                </div>
-                `;
+                benchContainer.innerHTML += generatePlayerCardHtml(p, true);
             });
         }
 
-        // INTERACTION: DETAILS MODAL
+        // 7. Modal logic (kept unchanged)
         function openPlayerModal(p) {
-            document.getElementById('modal-player-name').innerText = p.name;
+            document.getElementById('modal-player-name').innerText = p.name.replace(' (C)', '').replace(' (VC)', '');
             document.getElementById('modal-player-team').innerText = `${p.team.toUpperCase()} // ${p.position.toUpperCase()}`;
             document.getElementById('modal-stat-pts').innerText = p.points;
             document.getElementById('modal-stat-cost').innerText = p.cost;
@@ -1358,7 +1699,6 @@
             const extra2lbl = document.getElementById('modal-extra-title-2');
             const extra2val = document.getElementById('modal-extra-val-2');
 
-            // Format goal stats depending on league/tournament
             if (typeof p.goals === 'string' || (typeof p.goals === 'number' && !Number.isInteger(p.goals))) {
                 extra1lbl.innerText = 'Expected Goals';
                 extra1val.innerText = typeof p.goals === 'number' ? p.goals.toFixed(2) : p.goals;
@@ -1378,8 +1718,9 @@
             document.getElementById('player-modal').style.display = 'none';
         }
 
-        // Init view
+        // Init setup
         window.onload = () => {
+            updateThemeIcon();
             switchView('home');
         };
     </script>

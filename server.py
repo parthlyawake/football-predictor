@@ -961,7 +961,7 @@ class PredictiveMatrixHandler(SimpleHTTPRequestHandler):
             params = urlparse.parse_qs(parsed_path.query)
             league = params.get('league', ['epl'])[0]
             formation = params.get('formation', ['4-3-3'])[0]
-            budget = float(params.get('budget', [80.0])[0])
+            budget = float(params.get('budget', [100.0])[0])
             
             try:
                 starting_df, bench_df, final_budget = run_solver_for_api(league, formation, budget)

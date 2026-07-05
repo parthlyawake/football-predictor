@@ -28,7 +28,7 @@ lps_2025 = lps[lps['season'] == 2025].copy()
 # Add position column
 lps_2025['pos'] = lps_2025['position'].apply(get_position)
 
-def optimize_league_squad(df_league, budget=80.0):
+def optimize_league_squad(df_league, budget=100.0):
     # Calculate proxy prices and expected points
     base_prices = {'Goalkeeper': 4.5, 'Defender': 4.5, 'Midfielder': 5.0, 'Forward': 5.0}
     
@@ -136,7 +136,7 @@ for l_id, (l_name, l_title, color_name, color_hex) in leagues.items():
         'colorName': color_name,
         'players': players,
         'stories': stories,
-        'budgetUsed': f"£{opt_df['price'].sum():.1f}m / £80.0m",
+        'budgetUsed': f"£{opt_df['price'].sum():.1f}m / £100.0m",
         'expectedPoints': f"{opt_df['points'].sum():.1f} PTS"
     }
 

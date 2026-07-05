@@ -5,6 +5,16 @@ const dashboardData = {
     "colorName": "Mint",
     "players": [
       {
+        "name": "Dominik Szoboszlai",
+        "team": "Liverpool",
+        "position": "Defender",
+        "cost": "\u00a37.2m",
+        "points": "115.9 PTS",
+        "goals": 6,
+        "assists": 7,
+        "minutes": 3236
+      },
+      {
         "name": "James Garner",
         "team": "Everton",
         "position": "Defender",
@@ -25,24 +35,14 @@ const dashboardData = {
         "minutes": 3420
       },
       {
-        "name": "Mart\u00edn Zubimendi",
+        "name": "Declan Rice",
         "team": "Arsenal",
         "position": "Defender",
-        "cost": "\u00a35.5m",
-        "points": "91.4 PTS",
-        "goals": 5,
-        "assists": 1,
-        "minutes": 3040
-      },
-      {
-        "name": "Nikola Milenkovic",
-        "team": "Nottingham Forest",
-        "position": "Defender",
-        "cost": "\u00a34.6m",
-        "points": "67.2 PTS",
-        "goals": 0,
-        "assists": 0,
-        "minutes": 3360
+        "cost": "\u00a36.9m",
+        "points": "96.5 PTS",
+        "goals": 4,
+        "assists": 5,
+        "minutes": 3111
       },
       {
         "name": "Erling Haaland",
@@ -75,8 +75,8 @@ const dashboardData = {
         "minutes": 3220
       },
       {
-        "name": "Bart Verbruggen",
-        "team": "Brighton",
+        "name": "Djordje Petrovic",
+        "team": "Bournemouth",
         "position": "Goalkeeper",
         "cost": "\u00a34.5m",
         "points": "68.4 PTS",
@@ -105,26 +105,26 @@ const dashboardData = {
         "minutes": 2751
       },
       {
-        "name": "Elliot Anderson",
-        "team": "Nottingham Forest",
+        "name": "Enzo Fern\u00e1ndez",
+        "team": "Chelsea",
         "position": "Midfielder",
-        "cost": "\u00a36.6m",
-        "points": "102.6 PTS",
-        "goals": 4,
+        "cost": "\u00a38.7m",
+        "points": "124.5 PTS",
+        "goals": 10,
         "assists": 4,
-        "minutes": 3329
+        "minutes": 3149
       }
     ],
     "stories": [
       {
         "time": "18:45 UTC // PROJECTION RISE",
         "tag": "FORM UPDATE",
-        "text": "James Garner expected points increase following recent statistical surge."
+        "text": "Dominik Szoboszlai expected points increase following recent statistical surge."
       },
       {
         "time": "14:15 UTC // INJURY REPORT",
         "tag": "AVAILABILITY",
-        "text": "Virgil van Dijk cleared to start in upcoming league fixture."
+        "text": "James Garner cleared to start in upcoming league fixture."
       },
       {
         "time": "09:30 UTC // ALGORITHM TUNE",
@@ -134,11 +134,11 @@ const dashboardData = {
       {
         "time": "11:20 UTC // STAT ALERT",
         "tag": "EXPECTED THREAT",
-        "text": "Mart\u00edn Zubimendi ranks top in key pass metrics this week."
+        "text": "Virgil van Dijk ranks top in key pass metrics this week."
       }
     ],
-    "budgetUsed": "\u00a380.0m / \u00a380.0m",
-    "expectedPoints": "1403.1 PTS"
+    "budgetUsed": "\u00a386.1m / \u00a3100.0m",
+    "expectedPoints": "1478.7 PTS"
   },
   "la_liga": {
     "title": "La Liga",
@@ -216,8 +216,8 @@ const dashboardData = {
         "minutes": 2865
       },
       {
-        "name": "Ionut Radu",
-        "team": "Celta Vigo",
+        "name": "David Soria",
+        "team": "Getafe",
         "position": "Goalkeeper",
         "cost": "\u00a34.5m",
         "points": "68.4 PTS",
@@ -278,7 +278,7 @@ const dashboardData = {
         "text": "German Valera ranks top in key pass metrics this week."
       }
     ],
-    "budgetUsed": "\u00a379.6m / \u00a380.0m",
+    "budgetUsed": "\u00a379.6m / \u00a3100.0m",
     "expectedPoints": "1250.2 PTS"
   },
   "serie_a": {
@@ -347,14 +347,14 @@ const dashboardData = {
         "minutes": 2877
       },
       {
-        "name": "Nikola Vlasic",
-        "team": "Torino",
+        "name": "Rasmus H\u00f8jlund",
+        "team": "Napoli",
         "position": "Forward",
-        "cost": "\u00a36.9m",
-        "points": "112.5 PTS",
-        "goals": 8,
-        "assists": 3,
-        "minutes": 3079
+        "cost": "\u00a38.7m",
+        "points": "125.0 PTS",
+        "goals": 13,
+        "assists": 5,
+        "minutes": 2784
       },
       {
         "name": "Jean Butez",
@@ -419,8 +419,8 @@ const dashboardData = {
         "text": "Gianluca Mancini ranks top in key pass metrics this week."
       }
     ],
-    "budgetUsed": "\u00a379.7m / \u00a380.0m",
-    "expectedPoints": "1136.5 PTS"
+    "budgetUsed": "\u00a381.5m / \u00a3100.0m",
+    "expectedPoints": "1148.9 PTS"
   },
   "bundesliga": {
     "title": "Bundesliga",
@@ -428,44 +428,44 @@ const dashboardData = {
     "colorName": "Pink",
     "players": [
       {
-        "name": "Danilho Doekhi",
-        "team": "Union Berlin",
+        "name": "Jamie Leweling",
+        "team": "VfB Stuttgart",
         "position": "Defender",
-        "cost": "\u00a35.6m",
-        "points": "78.9 PTS",
-        "goals": 5,
-        "assists": 0,
-        "minutes": 3060
+        "cost": "\u00a37.6m",
+        "points": "99.3 PTS",
+        "goals": 7,
+        "assists": 9,
+        "minutes": 2385
       },
       {
-        "name": "Nathaniel Brown",
-        "team": "Eintracht Frankfurt",
+        "name": "Jakub Kaminski",
+        "team": "FC Cologne",
         "position": "Defender",
-        "cost": "\u00a35.9m",
-        "points": "77.6 PTS",
-        "goals": 4,
-        "assists": 4,
-        "minutes": 2668
+        "cost": "\u00a37.2m",
+        "points": "97.7 PTS",
+        "goals": 7,
+        "assists": 3,
+        "minutes": 3031
       },
       {
-        "name": "Robin Fellhauer",
-        "team": "Augsburg",
+        "name": "Maximilian Beier",
+        "team": "Borussia Dortmund",
         "position": "Defender",
-        "cost": "\u00a35.6m",
-        "points": "71.6 PTS",
-        "goals": 3,
-        "assists": 2,
-        "minutes": 2829
+        "cost": "\u00a38.4m",
+        "points": "94.0 PTS",
+        "goals": 9,
+        "assists": 6,
+        "minutes": 2069
       },
       {
-        "name": "Patrick Mainka",
-        "team": "FC Heidenheim",
+        "name": "\u00c1lex Grimaldo",
+        "team": "Bayer Leverkusen",
         "position": "Defender",
-        "cost": "\u00a35.5m",
-        "points": "70.9 PTS",
-        "goals": 2,
-        "assists": 2,
-        "minutes": 3060
+        "cost": "\u00a38.2m",
+        "points": "91.0 PTS",
+        "goals": 8,
+        "assists": 7,
+        "minutes": 2539
       },
       {
         "name": "Harry Kane",
@@ -478,6 +478,16 @@ const dashboardData = {
         "minutes": 2385
       },
       {
+        "name": "Deniz Undav",
+        "team": "VfB Stuttgart",
+        "position": "Forward",
+        "cost": "\u00a311.0m",
+        "points": "129.3 PTS",
+        "goals": 19,
+        "assists": 6,
+        "minutes": 2261
+      },
+      {
         "name": "Andrej Kramaric",
         "team": "Hoffenheim",
         "position": "Forward",
@@ -486,16 +496,6 @@ const dashboardData = {
         "goals": 14,
         "assists": 6,
         "minutes": 2256
-      },
-      {
-        "name": "Yan Diomande",
-        "team": "RasenBallsport Leipzig",
-        "position": "Forward",
-        "cost": "\u00a39.6m",
-        "points": "124.8 PTS",
-        "goals": 12,
-        "assists": 8,
-        "minutes": 2507
       },
       {
         "name": "Alexander N\u00fcbel",
@@ -518,36 +518,36 @@ const dashboardData = {
         "minutes": 2308
       },
       {
-        "name": "Rani Khedira",
-        "team": "Union Berlin",
+        "name": "Luis D\u00edaz",
+        "team": "Bayern Munich",
         "position": "Midfielder",
-        "cost": "\u00a36.1m",
-        "points": "73.8 PTS",
-        "goals": 5,
-        "assists": 1,
-        "minutes": 2854
+        "cost": "\u00a311.0m",
+        "points": "152.2 PTS",
+        "goals": 15,
+        "assists": 14,
+        "minutes": 2464
       },
       {
-        "name": "Maximilian Eggestein",
-        "team": "Freiburg",
+        "name": "Christoph Baumgartner",
+        "team": "RasenBallsport Leipzig",
         "position": "Midfielder",
-        "cost": "\u00a36.0m",
-        "points": "72.5 PTS",
-        "goals": 3,
-        "assists": 1,
-        "minutes": 3060
+        "cost": "\u00a39.9m",
+        "points": "134.8 PTS",
+        "goals": 13,
+        "assists": 8,
+        "minutes": 2811
       }
     ],
     "stories": [
       {
         "time": "18:45 UTC // PROJECTION RISE",
         "tag": "FORM UPDATE",
-        "text": "Danilho Doekhi expected points increase following recent statistical surge."
+        "text": "Jamie Leweling expected points increase following recent statistical surge."
       },
       {
         "time": "14:15 UTC // INJURY REPORT",
         "tag": "AVAILABILITY",
-        "text": "Nathaniel Brown cleared to start in upcoming league fixture."
+        "text": "Jakub Kaminski cleared to start in upcoming league fixture."
       },
       {
         "time": "09:30 UTC // ALGORITHM TUNE",
@@ -557,11 +557,11 @@ const dashboardData = {
       {
         "time": "11:20 UTC // STAT ALERT",
         "tag": "EXPECTED THREAT",
-        "text": "Robin Fellhauer ranks top in key pass metrics this week."
+        "text": "Maximilian Beier ranks top in key pass metrics this week."
       }
     ],
-    "budgetUsed": "\u00a380.0m / \u00a380.0m",
-    "expectedPoints": "1132.3 PTS"
+    "budgetUsed": "\u00a399.0m / \u00a3100.0m",
+    "expectedPoints": "1360.3 PTS"
   },
   "ligue_1": {
     "title": "Ligue 1",
@@ -589,24 +589,24 @@ const dashboardData = {
         "minutes": 3000
       },
       {
-        "name": "Djibril Sidibe",
-        "team": "Toulouse",
+        "name": "Igor Paix\u00e3o",
+        "team": "Marseille",
         "position": "Defender",
-        "cost": "\u00a35.7m",
-        "points": "62.3 PTS",
-        "goals": 3,
-        "assists": 4,
-        "minutes": 2169
+        "cost": "\u00a37.1m",
+        "points": "71.0 PTS",
+        "goals": 6,
+        "assists": 5,
+        "minutes": 1979
       },
       {
-        "name": "Jordan Lefort",
-        "team": "Angers",
+        "name": "Ars\u00e8ne Kouassi",
+        "team": "Lorient",
         "position": "Defender",
-        "cost": "\u00a34.9m",
-        "points": "61.2 PTS",
-        "goals": 0,
-        "assists": 2,
-        "minutes": 3060
+        "cost": "\u00a36.0m",
+        "points": "69.5 PTS",
+        "goals": 2,
+        "assists": 6,
+        "minutes": 2642
       },
       {
         "name": "Esteban Lepaul",
@@ -639,13 +639,13 @@ const dashboardData = {
         "minutes": 2811
       },
       {
-        "name": "Robin Risser",
-        "team": "Lens",
+        "name": "Mike Penders",
+        "team": "Strasbourg",
         "position": "Goalkeeper",
-        "cost": "\u00a34.6m",
-        "points": "54.7 PTS",
+        "cost": "\u00a34.5m",
+        "points": "51.6 PTS",
         "goals": 0,
-        "assists": 1,
+        "assists": 0,
         "minutes": 2970
       },
       {
@@ -659,6 +659,16 @@ const dashboardData = {
         "minutes": 2510
       },
       {
+        "name": "Adrien Thomasson",
+        "team": "Lens",
+        "position": "Midfielder",
+        "cost": "\u00a38.4m",
+        "points": "86.6 PTS",
+        "goals": 3,
+        "assists": 9,
+        "minutes": 2714
+      },
+      {
         "name": "Pierre-Emile H\u00f8jbjerg",
         "team": "Marseille",
         "position": "Midfielder",
@@ -667,16 +677,6 @@ const dashboardData = {
         "goals": 4,
         "assists": 5,
         "minutes": 2716
-      },
-      {
-        "name": "Valentin Rongier",
-        "team": "Rennes",
-        "position": "Midfielder",
-        "cost": "\u00a36.4m",
-        "points": "68.4 PTS",
-        "goals": 2,
-        "assists": 5,
-        "minutes": 2750
       }
     ],
     "stories": [
@@ -698,11 +698,11 @@ const dashboardData = {
       {
         "time": "11:20 UTC // STAT ALERT",
         "tag": "EXPECTED THREAT",
-        "text": "Djibril Sidibe ranks top in key pass metrics this week."
+        "text": "Igor Paix\u00e3o ranks top in key pass metrics this week."
       }
     ],
-    "budgetUsed": "\u00a380.0m / \u00a380.0m",
-    "expectedPoints": "1024.0 PTS"
+    "budgetUsed": "\u00a384.4m / \u00a3100.0m",
+    "expectedPoints": "1056.3 PTS"
   },
   "world_cup": {
     "title": "World Cup",
@@ -710,150 +710,150 @@ const dashboardData = {
     "colorName": "Ultraviolet",
     "players": [
       {
-        "name": "Enzo Fern\u00e1ndez",
-        "team": "Argentina",
+        "name": "Bruno Guimar\u00e3es",
+        "team": "Brazil",
         "position": "Midfielder",
-        "cost": "\u00a38.6m",
-        "points": "8.6 PTS",
-        "goals": "xG: 0.39",
-        "assists": "xA: 0.63",
+        "cost": "\u00a36.8m",
+        "points": "4.3 PTS",
+        "goals": "xG: 0.14",
+        "assists": "xA: 0.17",
+        "minutes": "CS: 38%"
+      },
+      {
+        "name": "Daniel Mu\u00f1oz",
+        "team": "Colombia",
+        "position": "Defender",
+        "cost": "\u00a34.6m",
+        "points": "6.9 PTS",
+        "goals": "xG: 0.23",
+        "assists": "xA: 0.40",
+        "minutes": "CS: 55%"
+      },
+      {
+        "name": "Emiliano Martinez",
+        "team": "Argentina",
+        "position": "Goalkeeper",
+        "cost": "\u00a35.0m",
+        "points": "7.4 PTS",
+        "goals": "xG: 0.00",
+        "assists": "xA: 0.14",
         "minutes": "CS: 64%"
       },
       {
-        "name": "Morgan Rogers",
-        "team": "England",
+        "name": "Kylian Mbappe-Lottin",
+        "team": "France",
+        "position": "Forward",
+        "cost": "\u00a310.5m",
+        "points": "7.0 PTS",
+        "goals": "xG: 0.80",
+        "assists": "xA: 0.19",
+        "minutes": "CS: 46%"
+      },
+      {
+        "name": "Vin\u00edcius J\u00fanior",
+        "team": "Brazil",
         "position": "Midfielder",
-        "cost": "\u00a37.4m",
-        "points": "7.4 PTS",
-        "goals": "xG: 0.29",
-        "assists": "xA: 0.48",
-        "minutes": "CS: 51%"
+        "cost": "\u00a310.0m",
+        "points": "7.0 PTS",
+        "goals": "xG: 0.39",
+        "assists": "xA: 0.35",
+        "minutes": "CS: 38%"
       },
       {
-        "name": "Malo Gusto",
-        "team": "France",
+        "name": "Jo\u00e3o Cancelo",
+        "team": "Portugal",
         "position": "Defender",
-        "cost": "\u00a35.9m",
-        "points": "6.2 PTS",
-        "goals": "xG: 0.02",
-        "assists": "xA: 0.39",
-        "minutes": "CS: 53%"
-      },
-      {
-        "name": "Ibrahima Konat\u00e9",
-        "team": "France",
-        "position": "Defender",
-        "cost": "\u00a35.5m",
-        "points": "6.1 PTS",
-        "goals": "xG: 0.03",
-        "assists": "xA: 0.01",
-        "minutes": "CS: 53%"
-      },
-      {
-        "name": "Pedro Porro",
-        "team": "Spain",
-        "position": "Defender",
-        "cost": "\u00a35.8m",
-        "points": "6.5 PTS",
-        "goals": "xG: 0.09",
-        "assists": "xA: 0.29",
-        "minutes": "CS: 49%"
-      },
-      {
-        "name": "James Trafford",
-        "team": "England",
-        "position": "Goalkeeper",
-        "cost": "\u00a34.5m",
-        "points": "0.0 PTS",
-        "goals": "xG: 0.00",
-        "assists": "xA: 0.00",
-        "minutes": "CS: 51%"
+        "cost": "\u00a35.3m",
+        "points": "3.6 PTS",
+        "goals": "xG: 0.06",
+        "assists": "xA: 0.19",
+        "minutes": "CS: 21%"
       },
       {
         "name": "Nahuel Molina",
         "team": "Argentina",
         "position": "Defender",
-        "cost": "\u00a36.9m",
+        "cost": "\u00a34.4m",
         "points": "8.1 PTS",
         "goals": "xG: 0.12",
         "assists": "xA: 1.04",
         "minutes": "CS: 64%"
       },
       {
+        "name": "Eric Garcia",
+        "team": "Spain",
+        "position": "Defender",
+        "cost": "\u00a34.5m",
+        "points": "3.8 PTS",
+        "goals": "xG: 0.01",
+        "assists": "xA: 0.08",
+        "minutes": "CS: 35%"
+      },
+      {
+        "name": "\u00d8rjan Nyland",
+        "team": "Norway",
+        "position": "Goalkeeper",
+        "cost": "\u00a34.2m",
+        "points": "3.3 PTS",
+        "goals": "xG: 0.00",
+        "assists": "xA: 0.00",
+        "minutes": "CS: 18%"
+      },
+      {
         "name": "Johan Mojica",
         "team": "Colombia",
         "position": "Defender",
-        "cost": "\u00a36.2m",
-        "points": "7.2 PTS",
+        "cost": "\u00a33.9m",
+        "points": "7.3 PTS",
         "goals": "xG: 0.06",
         "assists": "xA: 0.37",
         "minutes": "CS: 55%"
       },
       {
-        "name": "Kwasi Sibo",
-        "team": "Ghana",
+        "name": "Michael Olise",
+        "team": "France",
         "position": "Midfielder",
-        "cost": "\u00a35.3m",
-        "points": "2.7 PTS",
-        "goals": "xG: 0.00",
-        "assists": "xA: 0.00",
-        "minutes": "CS: 7%"
+        "cost": "\u00a39.5m",
+        "points": "7.6 PTS",
+        "goals": "xG: 0.57",
+        "assists": "xA: 0.78",
+        "minutes": "CS: 46%"
       },
       {
-        "name": "Obed Vargas",
-        "team": "Mexico",
+        "name": "Luis D\u00edaz",
+        "team": "Colombia",
         "position": "Midfielder",
-        "cost": "\u00a35.4m",
-        "points": "0.9 PTS",
-        "goals": "xG: 0.03",
-        "assists": "xA: 0.03",
-        "minutes": "CS: 45%"
-      },
-      {
-        "name": "Harry Kane",
-        "team": "England",
-        "position": "Forward",
-        "cost": "\u00a311.0m",
-        "points": "12.3 PTS",
-        "goals": "xG: 1.53",
-        "assists": "xA: 0.47",
-        "minutes": "CS: 51%"
-      },
-      {
-        "name": "Bara Sapoko Ndiaye",
-        "team": "Senegal",
-        "position": "Midfielder",
-        "cost": "\u00a35.0m",
-        "points": "0.0 PTS",
-        "goals": "xG: 0.00",
-        "assists": "xA: 0.00",
-        "minutes": "CS: 22%"
+        "cost": "\u00a38.1m",
+        "points": "11.9 PTS",
+        "goals": "xG: 0.82",
+        "assists": "xA: 0.95",
+        "minutes": "CS: 55%"
       },
       {
         "name": "Romelu Lukaku",
         "team": "Belgium",
         "position": "Forward",
-        "cost": "\u00a311.0m",
-        "points": "13.7 PTS",
-        "goals": "xG: 1.62",
-        "assists": "xA: 0.74",
-        "minutes": "CS: 34%"
+        "cost": "\u00a37.4m",
+        "points": "10.0 PTS",
+        "goals": "xG: 1.10",
+        "assists": "xA: 0.50",
+        "minutes": "CS: 27%"
       },
       {
-        "name": "Mike Maignan",
+        "name": "Ousmane Demb\u00e9l\u00e9",
         "team": "France",
-        "position": "Goalkeeper",
-        "cost": "\u00a35.4m",
-        "points": "6.2 PTS",
-        "goals": "xG: 0.00",
-        "assists": "xA: 0.00",
-        "minutes": "CS: 53%"
+        "position": "Midfielder",
+        "cost": "\u00a310.0m",
+        "points": "7.1 PTS",
+        "goals": "xG: 0.64",
+        "assists": "xA: 0.69",
+        "minutes": "CS: 46%"
       },
       {
         "name": "Lionel Messi",
         "team": "Argentina",
         "position": "Forward",
-        "cost": "\u00a311.0m",
+        "cost": "\u00a310.0m",
         "points": "19.6 PTS",
         "goals": "xG: 2.15",
         "assists": "xA: 1.78",
@@ -877,8 +877,8 @@ const dashboardData = {
         "text": "Mike Maignan confirmed starting goalkeeper choice for France defense."
       }
     ],
-    "budgetUsed": "\u00a3104.9m / \u00a3105.0m",
-    "expectedPoints": "105.6 PTS"
+    "budgetUsed": "\u00a3104.2m / \u00a3105.0m",
+    "expectedPoints": "114.9 PTS"
   },
   "home": {
     "title": "FANTASY MATRIX",
@@ -904,6 +904,16 @@ const dashboardData = {
         "minutes": 2709
       },
       {
+        "name": "Dominik Szoboszlai",
+        "team": "Liverpool",
+        "position": "Defender",
+        "cost": "\u00a37.2m",
+        "points": "115.9 PTS",
+        "goals": 6,
+        "assists": 7,
+        "minutes": 3236
+      },
+      {
         "name": "James Garner",
         "team": "Everton",
         "position": "Defender",
@@ -922,16 +932,6 @@ const dashboardData = {
         "goals": 6,
         "assists": 3,
         "minutes": 3207
-      },
-      {
-        "name": "Virgil van Dijk",
-        "team": "Liverpool",
-        "position": "Defender",
-        "cost": "\u00a35.5m",
-        "points": "100.8 PTS",
-        "goals": 6,
-        "assists": 0,
-        "minutes": 3420
       },
       {
         "name": "Bruno Fernandes",
@@ -954,14 +954,14 @@ const dashboardData = {
         "minutes": 2308
       },
       {
-        "name": "Harry Wilson",
-        "team": "Fulham",
+        "name": "Luis D\u00edaz",
+        "team": "Bayern Munich",
         "position": "Midfielder",
-        "cost": "\u00a38.0m",
-        "points": "127.2 PTS",
-        "goals": 10,
-        "assists": 7,
-        "minutes": 2751
+        "cost": "\u00a311.0m",
+        "points": "152.2 PTS",
+        "goals": 15,
+        "assists": 14,
+        "minutes": 2464
       },
       {
         "name": "Erling Haaland",
