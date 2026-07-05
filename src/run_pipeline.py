@@ -2,7 +2,7 @@ import subprocess
 import sys
 import os
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def run_script(script_name):
     script_path = os.path.join(workspace_dir, "src", script_name)

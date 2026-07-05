@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import subprocess
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results_path = os.path.join(workspace_dir, "results.csv")
 
 results = pd.read_csv(results_path)

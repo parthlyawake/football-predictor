@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def fetch_bootstrap_data():
     url = "https://fantasy.premierleague.com/api/bootstrap-static/"

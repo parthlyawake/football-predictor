@@ -8,9 +8,216 @@ from http.server import SimpleHTTPRequestHandler, HTTPServer
 import sys
 import re
 import unicodedata
+import html
+import difflib
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.abspath(__file__))
 data_dir = os.path.join(workspace_dir, "data")
+
+def clean_and_normalize(s):
+    if not isinstance(s, str):
+        return ""
+    s = html.unescape(s)
+    s = unicodedata.normalize('NFKD', s)
+    s = s.encode('ascii', 'ignore').decode('utf-8')
+    s = s.lower().strip()
+    s = re.sub(r'[^a-z0-9\s]', ' ', s)
+    s = re.sub(r'\s+', ' ', s).strip()
+    return s
+
+def normalize_country(c):
+    if not isinstance(c, str):
+        return ""
+    s = clean_and_normalize(c)
+    mapping = {
+        'czechia': 'czech republic',
+        'czech republic': 'czech republic',
+        'korea republic': 'south korea',
+        'south korea': 'south korea',
+        'turkiye': 'turkey',
+        'turkey': 'turkey',
+        'trkiye': 'turkey',
+        'usa': 'united states',
+        'united states': 'united states',
+        'congo dr': 'dr congo',
+        'dr congo': 'dr congo',
+        'cote d ivoire': 'ivory coast',
+        'cote divoire': 'ivory coast',
+        'cote d  ivoire': 'ivory coast',
+        'ivory coast': 'ivory coast',
+        'bosnia and herzegovina': 'bosnia',
+        'bosnia': 'bosnia',
+        'cape verde': 'cabo verde',
+        'cabo verde': 'cabo verde'
+    }
+    return mapping.get(s, s)
+
+def map_position(pos):
+    pos = str(pos).upper()
+    if pos in ['GK', 'GOALKEEPER']:
+        return 'Goalkeeper'
+    elif pos in ['DF', 'DEF', 'DEFENDER']:
+        return 'Defender'
+    elif pos in ['MF', 'MID', 'MIDFIELDER']:
+        return 'Midfielder'
+    elif pos in ['FW', 'FWD', 'FORWARD']:
+        return 'Forward'
+    return 'Midfielder'
+
+# Hardcoded aliases for known naming differences
+aliases = {
+    'alex grimaldo': 'alejandro grimaldo',
+    'grimaldo alex': 'alejandro grimaldo',
+    'gatito fernandez': 'roberto fernandez',
+    'fernandez gatito': 'roberto fernandez',
+}
+
+def match_wc_players(df):
+    prices_path = os.path.join(workspace_dir, "wc2026_players_prices.csv")
+    df_prices = pd.read_csv(prices_path, encoding='latin1')
+    
+    # Group candidates by country
+    prices_by_country = {}
+    for idx, row in df_prices.iterrows():
+        country_norm = normalize_country(row['country'])
+        if country_norm not in prices_by_country:
+            prices_by_country[country_norm] = []
+        
+        display_norm = clean_and_normalize(row['display_name'])
+        full_norm = clean_and_normalize(f"{row['first_name']} {row['last_name']}")
+        
+        prices_by_country[country_norm].append({
+            'row': row,
+            'display_norm': display_norm,
+            'full_norm': full_norm,
+            'display_tokens': set(display_norm.split()),
+            'full_tokens': set(full_norm.split())
+        })
+        
+    stop_words = {'de', 'da', 'dos', 'di', 'van', 'der', 'le', 'la', 'von', 'jr', 'junior'}
+    
+    matched_rows = []
+    fuzzy_matches_made = []
+    position_corrections = []
+    
+    for idx, row in df.iterrows():
+        p_name_us = row['player_name_us']
+        wc_name = row.get('wc_matched_name', '')
+        wc_team = row.get('wc_matched_team', row.get('national_team', ''))
+        
+        if pd.isna(wc_team) or not wc_team:
+            continue
+            
+        country_norm = normalize_country(wc_team)
+        candidates = prices_by_country.get(country_norm, [])
+        
+        p_name_us_norm = clean_and_normalize(p_name_us)
+        wc_name_norm = clean_and_normalize(wc_name)
+        
+        p_name_us_tokens = set(p_name_us_norm.split())
+        wc_name_tokens = set(wc_name_norm.split())
+        
+        found = None
+        score = 1.0
+        is_fuzzy = False
+        
+        # Check aliases first
+        for name_norm in [p_name_us_norm, wc_name_norm]:
+            if name_norm in aliases:
+                target_alias = aliases[name_norm]
+                for cand in candidates:
+                    if cand['display_norm'] == target_alias or cand['full_norm'] == target_alias:
+                        found = cand
+                        break
+            if found:
+                break
+                
+        # 1. Exact match sorted tokens check
+        if found is None:
+            p_sorted = " ".join(sorted(list(p_name_us_tokens)))
+            wc_sorted = " ".join(sorted(list(wc_name_tokens)))
+            
+            for cand in candidates:
+                cand_disp_sorted = " ".join(sorted(list(cand['display_tokens'])))
+                cand_full_sorted = " ".join(sorted(list(cand['full_tokens'])))
+                
+                if (wc_sorted and (wc_sorted == cand_disp_sorted or wc_sorted == cand_full_sorted)) or \
+                   (p_sorted and (p_sorted == cand_disp_sorted or p_sorted == cand_full_sorted)):
+                    found = cand
+                    break
+                    
+        # 2. Token subset matching
+        if found is None:
+            for cand in candidates:
+                p_sub = p_name_us_tokens - stop_words
+                wc_sub = wc_name_tokens - stop_words
+                cand_disp_sub = cand['display_tokens'] - stop_words
+                cand_full_sub = cand['full_tokens'] - stop_words
+                
+                if (len(p_sub) >= 1 and (p_sub.issubset(cand_disp_sub) or p_sub.issubset(cand_full_sub) or cand_disp_sub.issubset(p_sub))) or \
+                   (len(wc_sub) >= 1 and (wc_sub.issubset(cand_disp_sub) or wc_sub.issubset(cand_full_sub) or cand_disp_sub.issubset(wc_sub))):
+                    found = cand
+                    break
+                    
+        # 3. Fuzzy match checks
+        if found is None and len(candidates) > 0:
+            best_cand = None
+            best_score = 0.0
+            
+            for cand in candidates:
+                cand_display = cand['display_norm']
+                cand_full = cand['full_norm']
+                
+                s1 = difflib.SequenceMatcher(None, wc_name_norm, cand_display).ratio() if wc_name_norm else 0.0
+                s2 = difflib.SequenceMatcher(None, wc_name_norm, cand_full).ratio() if wc_name_norm else 0.0
+                s3 = difflib.SequenceMatcher(None, p_name_us_norm, cand_display).ratio() if p_name_us_norm else 0.0
+                s4 = difflib.SequenceMatcher(None, p_name_us_norm, cand_full).ratio() if p_name_us_norm else 0.0
+                
+                max_s = max(s1, s2, s3, s4)
+                if max_s > best_score:
+                    best_score = max_s
+                    best_cand = cand
+                    
+            if best_score >= 0.90:
+                found = best_cand
+                score = best_score
+                is_fuzzy = True
+                
+        if found is not None:
+            real_price = found['row']['fantasy_price']
+            real_pos_code = found['row']['fantasy_position']
+            real_pos = map_position(real_pos_code)
+            
+            orig_pos_raw = row.get('wc_matched_position', row.get('pos', ''))
+            orig_pos = map_position(orig_pos_raw)
+            
+            if orig_pos != real_pos:
+                position_corrections.append({
+                    'player': p_name_us,
+                    'team': wc_team,
+                    'orig': orig_pos,
+                    'real': real_pos
+                })
+                
+            if is_fuzzy:
+                fuzzy_matches_made.append({
+                    'player': p_name_us,
+                    'team': wc_team,
+                    'matched_name': found['row']['display_name'],
+                    'score': score
+                })
+                
+            new_row = row.copy()
+            new_row['proxy_price'] = real_price
+            new_row['price'] = real_price
+            new_row['wc_matched_position'] = real_pos_code
+            new_row['pos'] = real_pos
+            new_row['position'] = real_pos
+            matched_rows.append(new_row)
+        else:
+            print(f"[WARNING] no price/position match found: {p_name_us} ({wc_team})")
+            
+    return pd.DataFrame(matched_rows), fuzzy_matches_made, position_corrections
 
 def name_tokens(s):
     if not isinstance(s, str):
@@ -186,16 +393,32 @@ def calculate_wc_expected_points():
     # Hard-filter and remove players with fewer than 450 mins or fewer than 3 starts/caps
     pm_active = pm_active[(pm_active['time'] >= 450) | (pm_active['starts'] >= 3) | (pm_active['wc_matched_caps'] >= 3)].copy()
     
-    # Map positions
-    pos_map = {'GK': 'Goalkeeper', 'DF': 'Defender', 'MF': 'Midfielder', 'FW': 'Forward'}
+    # Match prices and positions dynamically using the wc2026_players_prices.csv
+    pm_active, fuzzy_matches, position_corrections = match_wc_players(pm_active)
+    
+    # Print matching logs in console
+    if fuzzy_matches:
+        print("\n--- SERVER: FUZZY MATCHES MADE ---")
+        for f in fuzzy_matches:
+            print(f"  Fuzzy Match: {f['player']} ({f['team']}) -> {f['matched_name']}, score: {f['score']:.2%}")
+    if position_corrections:
+        print("\n--- SERVER: POSITION CORRECTIONS ---")
+        for p in position_corrections:
+            print(f"  Position Corrected: {p['player']} ({p['team']}): {p['orig']} -> {p['real']}")
+            
+    # Map positions using the new code mapping
+    pos_map = {
+        'GK': 'Goalkeeper', 'DF': 'Defender', 'MF': 'Midfielder', 'FW': 'Forward',
+        'DEF': 'Defender', 'MID': 'Midfielder', 'FWD': 'Forward'
+    }
     pm_active['pos'] = pm_active['wc_matched_position'].map(pos_map)
     
-    # Hardcode positional overrides for hybrid wingers/midfielders
-    for idx, row in pm_active.iterrows():
-        p_name = str(row['player_name_us']).lower()
-        wc_n = str(row['wc_matched_name']).lower()
-        if 'dembele' in p_name or 'dembele' in wc_n or 'vinicius' in p_name or 'vinicius' in wc_n or 'yamal' in p_name or 'yamal' in wc_n or 'olise' in p_name or 'olise' in wc_n:
-            pm_active.at[idx, 'pos'] = 'Midfielder'
+    # Commented out hardcode positional overrides for hybrid wingers/midfielders (relying on official positions)
+    # for idx, row in pm_active.iterrows():
+    #     p_name = str(row['player_name_us']).lower()
+    #     wc_n = str(row['wc_matched_name']).lower()
+    #     if 'dembele' in p_name or 'dembele' in wc_n or 'vinicius' in p_name or 'vinicius' in wc_n or 'yamal' in p_name or 'yamal' in wc_n or 'olise' in p_name or 'olise' in wc_n:
+    #         pm_active.at[idx, 'pos'] = 'Midfielder'
             
     # Strict World Cup Squad List Gate: Roster Validation
     valid_indices = []
@@ -214,9 +437,8 @@ def calculate_wc_expected_points():
             valid_indices.append(idx)
             
     pm_active = pm_active.loc[valid_indices].copy()
-            
-    # Dynamic pricing normalization using assign_real_wc_price
-    pm_active['price'] = pm_active.apply(assign_real_wc_price, axis=1)
+    
+    # Price is already assigned by match_wc_players as pm_active['price']
     
     # Inject missing goalkeepers from non-top-5 leagues
     missing_gks = [
@@ -310,7 +532,9 @@ def calculate_wc_expected_points():
         }
     ]
     df_missing = pd.DataFrame(missing_gks)
-    pm_active = pd.concat([pm_active, df_missing], ignore_index=True)
+    # Run matching on missing GKs to inject their official prices/positions
+    df_missing_matched, _, _ = match_wc_players(df_missing)
+    pm_active = pd.concat([pm_active, df_missing_matched], ignore_index=True)
     
     # Pre-calculate max GK caps for dynamic starting hierarchy
     gk_players = pm_active[pm_active['pos'] == 'Goalkeeper'].copy()

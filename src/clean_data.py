@@ -4,7 +4,7 @@ import unicodedata
 import re
 import os
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_dir = os.path.join(workspace_dir, "data")
 os.makedirs(data_dir, exist_ok=True)
 

@@ -4,7 +4,7 @@ import os
 import lightgbm as lgb
 from sklearn.metrics import mean_absolute_error, root_mean_squared_error
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_dir = os.path.join(workspace_dir, "data")
 
 def run_backtest():

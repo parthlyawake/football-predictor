@@ -5,7 +5,7 @@ import pulp
 import json
 import re
 
-workspace_dir = r"c:\Users\Parth\OneDrive\Desktop\football-aku"
+workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_dir = os.path.join(workspace_dir, "data")
 
 def get_position(pos_str):
